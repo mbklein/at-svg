@@ -16,7 +16,16 @@ TrailController = (function($) {
       }
     });
     
-    $(window).trigger('hashchange');
+    setTimeout(function() {
+      if (document.location.hash != "") {
+        $(window).trigger('hashchange');
+      } else {
+        var loc = $.cookie('trail-location')
+        if (loc != null && loc != NaN) {
+          TrailController.markerAt(loc);
+        }
+      }
+    }, 2000);
   });
   
   return {
@@ -60,6 +69,7 @@ TrailController = (function($) {
         this.marker.animate({ path: pathSpec }, ms, '>');
         this.markerText.animateWith(this.marker, { x: pos - 6 }, ms, '>');
       }
+      $.cookie('trail-location', mi, { expires: 365 });
     }
   };
 }(jQuery))
