@@ -1,75 +1,77 @@
 TrailController = (function($) {
-  var margin, one_mile, center;
+  var margin, one_mile, center, marker;
   
-  $(document).ready(function() {
-    margin = 24.1375;
-    one_mile = 24.1375;
-    center = $('#profile').width() / 2;
-    
-    $(window).hashchange(function() {
-      var hash = document.location.hash;
-      if (hash != "") {
-        var loc = Number(hash.substring(1,hash.length));
-        if (loc != NaN) {
-          TrailController.markerAt(loc);
-        }
-      }
-    });
-    
-    setTimeout(function() {
-      if (document.location.hash != "") {
-        $(window).trigger('hashchange');
+  var getHashAsNumber = function() {
+    var hash = document.location.hash;
+    if (hash != "") {
+      var loc = Number(hash.substring(1,hash.length));
+      if (loc != NaN) {
+        return loc;
       } else {
-        var loc = $.cookie('trail-location')
-        if (loc != null && loc != NaN) {
-          TrailController.markerAt(loc);
-        }
+        return null;
       }
-    }, 2000);
-  });
-  
-  return {
-    marker: null,
-    markerText: null,
+    } else {
+      return null;
+    }
+  };
+    
+  var $t = {
     easing: 'easeOutExpo',
+    marker: marker,
+    
+    initialize: function() {
+      margin = 24.1375;
+      one_mile = 24.1375;
+      center = $('#profile').width() / 4;
+      this.marker = marker = new Marker(this, one_mile, margin);
+
+      $(window).hashchange(function() {
+        $t.position(getHashAsNumber());
+      });
+
+      var loc = getHashAsNumber();
+      if (loc == null) {
+        loc = $.cookie('trail-location') || 0;
+      }
+      marker.initialize(loc);
+      $(profile).scrollLeft(marker.position - center);
+      $('#container').animate({'opacity':1},2000);
+      $('#overlay').animate({opacity:1},2500);
+    },
+    
+    position: function(mi) { 
+      if (mi == null) {
+        return (marker.position - margin) / one_mile;
+      } else {
+        if (mi.toString().match(/^[+-]/)) {
+          mi = this.position() + Number(mi);
+        }
+        marker.moveTo(mi);
+        $.cookie('trail-location', mi, { expires: 365 });
+        return mi;
+      }
+    },
     
     scrollTo: function(mi) {
       var newPos = ((mi * one_mile) + margin) - center;
       var currentPos = $('#profile').scrollLeft();
       var distance = Math.abs(newPos - currentPos);
       var time = Math.min((distance / one_mile) * 100, 5000);
-
-      $('#profile').animate( { scrollLeft: newPos }, time, this.easing );
+      currentMileage = mi;
+      
+      $('#profile').animate( { scrollLeft: newPos }, time, $t.easing );
       return time;
     },
     
     scrollBy: function(delta) {
       var currentPos = $('#profile').scrollLeft() / one_mile;
       var mi = (currentPos + delta);
-      return this.scrollTo(mi);
-    },
-    
-    markerAt: function(mi) {
-      var pos = (one_mile * mi) + margin;
-      var pathSpec = 'M'+pos+' 20L'+pos+' 310';
-      if (this.marker == null) {
-        var c = Raphael('overlay', $('#overlay').width(), $('#overlay').height());
-        this.marker = c.path(pathSpec).attr( { stroke: '#FF0000' } );
-        this.markerText = c.text(pos - 6, 60, 'You are here!').attr({ 
-          'font-family': 'Helvetica Neue;Verdana;Lucida Sans;sans-serif',
-          'font-size': '10pt', 
-          'font-weight': 'normal',
-          'fill': 'red', 
-          'stroke-width': 0,
-          'rotation': 270 
-        })
-        this.scrollTo(mi);
-      } else {
-        var ms = this.scrollTo(mi);
-        this.marker.animate({ path: pathSpec }, ms, '>');
-        this.markerText.animateWith(this.marker, { x: pos - 6 }, ms, '>');
-      }
-      $.cookie('trail-location', mi, { expires: 365 });
+      return $t.scrollTo(mi);
     }
   };
-}(jQuery))
+  return $t;
+}(jQuery));
+
+$(window).load(function() {
+  TrailController.initialize();
+});

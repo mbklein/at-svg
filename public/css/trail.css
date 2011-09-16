@@ -15,6 +15,7 @@ body {
 	position: relative;
 	width: 1024px;
 	padding: 0;
+  opacity: 0;
 }
 #grid-left  { 
 	left: 4px;
@@ -41,4 +42,5 @@ body {
 }
 #overlay {
   z-index: 2;
+  opacity: 0;
 }
