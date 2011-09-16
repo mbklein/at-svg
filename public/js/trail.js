@@ -74,4 +74,5 @@ TrailController = (function($) {
 
 $(window).load(function() {
   TrailController.initialize();
+  drawTrail();
 });
