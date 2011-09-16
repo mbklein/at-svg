@@ -5,6 +5,18 @@ TrailController = (function($) {
     margin = 24.1375;
     one_mile = 24.1375;
     center = $('#profile').width() / 2;
+    
+    $(window).hashchange(function() {
+      var hash = document.location.hash;
+      if (hash != "") {
+        var loc = Number(hash.substring(1,hash.length));
+        if (loc != NaN) {
+          TrailController.markerAt(loc);
+        }
+      }
+    });
+    
+    $(window).trigger('hashchange');
   });
   
   return {
