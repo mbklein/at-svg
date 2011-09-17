@@ -23,6 +23,7 @@ TrailController = (function($) {
       margin = 24.1375;
       one_mile = 24.1375;
       center = $('#profile').width() / 4;
+      this.contour = drawTrail();
       this.marker = marker = new Marker(this, one_mile, margin);
 
       $(window).hashchange(function() {
@@ -39,6 +40,20 @@ TrailController = (function($) {
       $('#overlay').animate({opacity:1},2500);
     },
     
+    contourAt: function(pos) {
+      var px = pos + margin;
+      var testX = px;
+      var test = this.contour.getPointAtLength(testX);
+      while (test.x < px) { testX += 1000; test = this.contour.getPointAtLength(testX); }
+      while (test.x > px) { testX -= 500 ; test = this.contour.getPointAtLength(testX); }
+      while (test.x < px) { testX += 100 ; test = this.contour.getPointAtLength(testX); }
+      while (test.x > px) { testX -= 50  ; test = this.contour.getPointAtLength(testX); }
+      while (test.x < px) { testX += 10  ; test = this.contour.getPointAtLength(testX); }
+      while (test.x > px) { testX -= 1   ; test = this.contour.getPointAtLength(testX); }
+      test.at = testX;
+      return test
+    },
+
     position: function(mi) { 
       if (mi == null) {
         return (marker.position - margin) / one_mile;
@@ -74,5 +89,4 @@ TrailController = (function($) {
 
 $(window).load(function() {
   TrailController.initialize();
-  drawTrail();
 });

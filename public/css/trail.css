@@ -16,6 +16,8 @@ body {
 	width: 1024px;
 	padding: 0;
   opacity: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 #grid-left  { 
 	left: 4px;

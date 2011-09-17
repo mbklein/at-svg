@@ -3,16 +3,23 @@ Marker = (function($) {
     var paper, objects;
         
     var createObjects = function(pos) {
-      var pathSpec = 'M'+pos+' 20L'+pos+' 310';
-      objects.push(paper.path(pathSpec).attr( { stroke: '#FF0000' } ));
-      objects.push(paper.text(pos - 6, 60, 'You are here!').attr({ 
-        'font-family': 'Helvetica Neue;Verdana;Lucida Sans;sans-serif',
-        'font-size': '10pt', 
-        'font-weight': 'normal',
-        'fill': 'red', 
-        'stroke-width': 0,
-        'rotation': 270 
-      }));
+      var y = controller.contourAt(pos).y - 40;
+      var pathSpec = 'M'+pos+' '+(y-60)+'L'+pos+' '+y;
+        objects.push(paper.text(pos, y, '☟')).attr({
+          'font-size': '24pt', 
+          'font-weight': 'normal',
+          'fill': 'red', 
+          'stroke-width': 0
+        })
+//      objects.push(paper.text(pos - 6, y, 'You are here!').attr({ 
+//        'font-family': 'Helvetica Neue;Verdana;Lucida Sans;sans-serif',
+//        'font-size': '10pt', 
+//        'font-weight': 'normal',
+//        'fill': 'red', 
+//        'stroke-width': 0,
+//        'rotation': 270,
+//        'align': 'left'
+//      }));
       return objects;
     }
 
@@ -30,9 +37,15 @@ Marker = (function($) {
 
       moveTo: function(mi) {
         var pos = (one_mile * mi) + margin;
-        var delta = pos - this.position;
+        var startPoint = controller.contourAt(this.position).at;
+        var endPoint = controller.contourAt(pos).at;
+        var path = controller.contour.getSubpath(Math.min(startPoint, endPoint), Math.max(startPoint, endPoint));
         var ms = controller.scrollTo(mi);
-        objects.animate({ translation: [delta,0].join(',') }, ms, '>');
+        if (startPoint < endPoint) {
+          objects.animateAlong(path, ms);
+        } else {
+          objects.animateAlongBack(path, ms);
+        }
         this.position = pos;
       }
     }
