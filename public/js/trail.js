@@ -82,8 +82,8 @@ TrailController = (function($) {
     
     contourAt: function(pos) {
       var tries = 0;
-      var report = function(x,p,d) {
-        // console.debug(tries + ': Test value '+x+' found point at '+p+' when looking for '+d+'. ('+(p/d*100)+'%)')
+      var report = function(iter,x,p,d) {
+        console.debug(iter + ': Test value '+x+' found point at '+p+' when looking for '+d+'. ('+(p/d*100)+'%)')
       }
       var px = pos + margin;
       
@@ -91,7 +91,7 @@ TrailController = (function($) {
       var path = null;
       var zero;
       for (pathIndex; pathIndex < stuff.contour.items.length; pathIndex++) {
-        // console.debug("Checking path "+pathIndex)
+        console.debug("Checking path "+pathIndex)
         var tp = stuff.contour.items[pathIndex].attrs.path;
         if (tp[0][1] <= px && tp[tp.length-1][1] >= px) {
           path = stuff.contour.items[pathIndex];
@@ -105,37 +105,19 @@ TrailController = (function($) {
       
       var testX = px - zero - margin;
       var result = path.getPointAtLength(testX);
-      while (result.x / px < .999 && tries < 3) {
-        report(testX,result.x,px);
-        testX *= (px / result.x);
-        result = path.getPointAtLength(testX);
-        tries += 1;
-      }
-      tries = 0;
-      while (result.x / px > 1.01 && tries < 3) {
-        report(testX,result.x,px);
-        testX *= (px / result.x);
-        result = path.getPointAtLength(testX);
-        tries += 1;
-      }
-      tries = 0;
-      while (result.x / px < .999 && tries < 3) {
-        report(testX,result.x,px);
-        testX *= (px / result.x);
-        result = path.getPointAtLength(testX);
-        tries += 1;
-      }
-      tries = 0;
-      while (result.x / px > 1.01 && tries < 3) {
-        report(testX,result.x,px);
-        testX *= (px / result.x);
-        result = path.getPointAtLength(testX);
-        tries += 1;
-      }
-      // console.debug(result.x/px)
+      var delta = testX * (result.x / px)
+      report('0',testX,result.x,px);
+      while ( px > result.x ) { report('1',testX,result.x,px); testX += delta;    result = path.getPointAtLength(testX) }
+      while ( px < result.x ) { report('2',testX,result.x,px); testX -= delta/2;  result = path.getPointAtLength(testX) }
+      while ( px > result.x ) { report('3',testX,result.x,px); testX += delta/4;  result = path.getPointAtLength(testX) }
+      while ( px < result.x ) { report('4',testX,result.x,px); testX -= delta/8;  result = path.getPointAtLength(testX) }
+      while ( px > result.x ) { report('5',testX,result.x,px); testX += delta/16; result = path.getPointAtLength(testX) }
+      while ( px < result.x ) { report('6',testX,result.x,px); testX -= delta/32; result = path.getPointAtLength(testX) }
+
       result.at = testX;
       result.path = path;
       result.pathIndex = pathIndex;
+      console.debug(result.x/px)
       return result;
     },
 

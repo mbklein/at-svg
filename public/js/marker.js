@@ -35,55 +35,64 @@ Marker = (function($) {
         var paper = controller.paper;
         var startPoint = ocp.at;
         var endPoint = ncp.at;
-
-        var subPath = function(cp, s, e) {
-          return paper.path(cp.path.getSubpath(s,e)).attr({stroke:'none'});
+        var removablePaths = [];
+        
+        var subPath = function(p, s, e) {
+          if (s == null && e == null) { return p }
+          if (s == null) { s = 0 }
+          if (e == null) { e = p.getTotalLength() }
+          var result = paper.path(p.getSubpath(s,e)).attr({stroke:'none'});
+          removablePaths.push(result);
+          return result;
         }
         var paths = [];
         if (ocp.pathIndex < ncp.pathIndex || startPoint < endPoint) {
           if (ocp.pathIndex == ncp.pathIndex) {
-            paths.push(subPath(ocp,startPoint,endPoint));
+            paths.push(subPath(ocp.path,startPoint,endPoint));
           } else {
-            paths.push(subPath(ocp,startPoint,this.countourPos.path.getTotalLength()));
+            paths.push(subPath(ocp.path,startPoint));
             var i = ocp.pathIndex + 1;
             while (i < ncp.pathIndex) {
-              paths.push(controller.stuff.contour.items[i].clone());
+              var somePath = controller.stuff.contour.items[i];
+              paths.push(subPath(somePath));
+              i += 1;
             }
-            paths.push(subPath(ocp,0,endPoint));
+            paths.push(subPath(ncp.path,0,endPoint));
           }
         } else {
           if (ocp.pathIndex == ncp.pathIndex) {
-            paths.push(subPath(ocp,endPoint,startPoint));
+            paths.push(subPath(ocp.path,startPoint,endPoint));
           } else {
-            paths.push(subPath(ncp,endPoint,ncp.getTotalLength()));
-            var i = ncp.pathIndex - 1;
-            while (i > ocp.pathIndex) {
-              paths.push(controller.stuff.contour.items[i].clone());
+            paths.push(subPath(ocp.path,0,startPoint));
+            var i = ocp.pathIndex - 1;
+            while (i > ncp.pathIndex) {
+              var somePath = controller.stuff.contour.items[i];
+              paths.push(subPath(somePath));
+              i -= 1;
             }
-            paths.push(subPath(ocp,0,endPoint));
+            paths.push(subPath(ncp.path,endPoint));
           }
         }
         
-//        console.dir(paths)
-//        console.debug("Animating along " + paths.length + " paths")
-        var ms = 10000 / paths.length;
+        console.debug("Animating along " + paths.length + " paths")
+        var ms = 15000 / paths.length;
         setTimeout(function() { controller.scrollTo(mi); }, 3000);
-//        console.debug('Starting animation...')        
+        console.debug('Starting animation...')        
         if (startPoint < endPoint) {
           var animateProc = function(paths,i) {
             if (i >= 0) {
               objects.animateAlong(paths[i], ms, function() { animateProc(paths,i-1) })
             } else {
-              $.each(paths,function(p) { paths[p].remove() })
+              $.each(removablePaths,function(p) { removablePaths[p].remove() })
             }
           }
           animateProc(paths, paths.length - 1);
         } else {
           var animateProc = function(paths,i) {
             if (i < paths.length) {
-              objects.animateAlong(paths[i], ms, function() { animateProc(paths,i+1) })
+              objects.animateAlongBack(paths[i], ms, function() { animateProc(paths,i+1) })
             } else {
-              $.each(paths,function(p) { paths[p].remove() })
+              $.each(removablePaths,function(p) { removablePaths[p].remove() })
             }
           }
           animateProc(paths, 0);
