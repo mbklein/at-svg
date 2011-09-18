@@ -1,5 +1,6 @@
 TrailController = (function($) {
-  var margin, one_mile, center, marker;
+  var margin, one_mile, center;
+  var stuff = {};
   
   var getHashAsNumber = function() {
     var hash = document.location.hash;
@@ -17,51 +18,141 @@ TrailController = (function($) {
     
   var $t = {
     easing: 'easeOutExpo',
-    marker: marker,
+    stuff: stuff,
     
     initialize: function() {
       margin = 24.1375;
       one_mile = 24.1375;
       center = $('#profile').width() / 4;
-      this.contour = drawTrail();
-      this.marker = marker = new Marker(this, one_mile, margin);
+      this.paper = Raphael('overlay', $('#overlay').width(), $('#overlay').height());
+      stuff.waypoints = this.paper.set();
+      
+      this.drawMiles();
+      
+      $.get('/path_info/Shaded_Profile').success(function(data) { 
+        stuff.profile = TrailController.paper.path(data[0]).translate(0,-1).attr({ 'fill' : '#e1a51b' });
+      });
 
+      $.get('/path_info/Simplified_Path').success(function(data) { 
+        stuff.contour = TrailController.paper.set();
+        $.each(data,function(i) { stuff.contour.push(TrailController.paper.path(data[i]).attr({ 'stroke' : 'none' })) });
+        // .translate(0,20);
+        stuff.marker = marker = new Marker($t, one_mile, margin);
+        var loc = getHashAsNumber();
+        if (loc == null) {
+          loc = $.cookie('trail-location') || 0;
+        }
+        stuff.marker.initialize(loc);
+        $(profile).scrollLeft(stuff.marker.position - center);
+      });
+      
       $(window).hashchange(function() {
         $t.position(getHashAsNumber());
       });
 
-      var loc = getHashAsNumber();
-      if (loc == null) {
-        loc = $.cookie('trail-location') || 0;
+      setTimeout(function() {
+        $('#container').animate({'opacity':1},2000);
+        $('#overlay').animate({opacity:1},2500);
+      },2000);
+    },
+    
+    drawMiles: function() {
+      var p = this.paper;
+      p.rect(0,20,$('#overlay').width(),290)
+      for (var i = 0; i < 2200; i += 1) { 
+        var xPos = (i*one_mile)+margin;
+        if (i % 5 == 0) {
+          p.text(xPos,320,i).attr({ 'font-size': '12pt', stroke: 'none', fill: 'black' }) 
+          p.path('M'+xPos+' 20L'+xPos+' 25').attr({ stroke: 'black' })
+        } else {
+          p.path('M'+xPos+' 20L'+xPos+' 22').attr({ stroke: 'black' })
+        }
       }
-      marker.initialize(loc);
-      $(profile).scrollLeft(marker.position - center);
-      $('#container').animate({'opacity':1},2000);
-      $('#overlay').animate({opacity:1},2500);
+    },
+    
+    drawWaypoint: function(mi, text, color) {
+      if (color == null) { color = 'black' }
+      var p = this.contourAtMile(mi);
+      var m = this.paper.set();
+      m.push(this.paper.path("M"+p.at+" "+p.y+"L"+p.at+" "+(p.y-15)).attr({ stroke: color, 'stroke-weight': '1pt' }));
+      m.push(this.paper.text(p.at, p.y-20, text).attr({'text-anchor':'start',fill: color,stroke: 'none'}).rotate(270,p.at,p.y-20));
+      stuff.waypoints.push(m);
+      return m
     },
     
     contourAt: function(pos) {
+      var tries = 0;
+      var report = function(x,p,d) {
+        // console.debug(tries + ': Test value '+x+' found point at '+p+' when looking for '+d+'. ('+(p/d*100)+'%)')
+      }
       var px = pos + margin;
-      var testX = px;
-      var test = this.contour.getPointAtLength(testX);
-      while (test.x < px) { testX += 1000; test = this.contour.getPointAtLength(testX); }
-      while (test.x > px) { testX -= 500 ; test = this.contour.getPointAtLength(testX); }
-      while (test.x < px) { testX += 100 ; test = this.contour.getPointAtLength(testX); }
-      while (test.x > px) { testX -= 50  ; test = this.contour.getPointAtLength(testX); }
-      while (test.x < px) { testX += 10  ; test = this.contour.getPointAtLength(testX); }
-      while (test.x > px) { testX -= 1   ; test = this.contour.getPointAtLength(testX); }
-      test.at = testX;
-      return test
+      
+      var pathIndex = 0;
+      var path = null;
+      var zero;
+      for (pathIndex; pathIndex < stuff.contour.items.length; pathIndex++) {
+        // console.debug("Checking path "+pathIndex)
+        var tp = stuff.contour.items[pathIndex].attrs.path;
+        if (tp[0][1] <= px && tp[tp.length-1][1] >= px) {
+          path = stuff.contour.items[pathIndex];
+          zero = (tp[0][1]);
+          break;
+        }
+      }
+      if (path == null) {
+        return;
+      }
+      
+      var testX = px - zero - margin;
+      var result = path.getPointAtLength(testX);
+      while (result.x / px < .999 && tries < 3) {
+        report(testX,result.x,px);
+        testX *= (px / result.x);
+        result = path.getPointAtLength(testX);
+        tries += 1;
+      }
+      tries = 0;
+      while (result.x / px > 1.01 && tries < 3) {
+        report(testX,result.x,px);
+        testX *= (px / result.x);
+        result = path.getPointAtLength(testX);
+        tries += 1;
+      }
+      tries = 0;
+      while (result.x / px < .999 && tries < 3) {
+        report(testX,result.x,px);
+        testX *= (px / result.x);
+        result = path.getPointAtLength(testX);
+        tries += 1;
+      }
+      tries = 0;
+      while (result.x / px > 1.01 && tries < 3) {
+        report(testX,result.x,px);
+        testX *= (px / result.x);
+        result = path.getPointAtLength(testX);
+        tries += 1;
+      }
+      // console.debug(result.x/px)
+      result.at = testX;
+      result.path = path;
+      result.pathIndex = pathIndex;
+      return result;
     },
 
+    contourAtMile: function(mi) {
+      var result = this.contourAt((one_mile * mi) + margin);
+      console.debug(mi + ' : ' + result.x);
+      return result;
+    },
+    
     position: function(mi) { 
       if (mi == null) {
-        return (marker.position - margin) / one_mile;
+        return (stuff.marker.position - margin) / one_mile;
       } else {
         if (mi.toString().match(/^[+-]/)) {
           mi = this.position() + Number(mi);
         }
-        marker.moveTo(mi);
+        stuff.marker.moveTo(mi);
         $.cookie('trail-location', mi, { expires: 365 });
         return mi;
       }
@@ -82,6 +173,14 @@ TrailController = (function($) {
       var currentPos = $('#profile').scrollLeft() / one_mile;
       var mi = (currentPos + delta);
       return $t.scrollTo(mi);
+    },
+    
+    rectify: function(shape, callback) {
+      shape.scale(6.262,6.262,24.1375,145.013)
+      if (typeof callback == 'function') {
+        callback(shape);
+      }
+      // console.debug(shape.attr('path').map(function(n) { return n.join(' ') }).join(''))
     }
   };
   return $t;
