@@ -1,9 +1,3 @@
-PATH
-  remote: /Users/mbklein/Workspace/gems/yakkety
-  specs:
-    yakkety (0.4.0)
-      nokogiri
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -24,4 +18,3 @@ DEPENDENCIES
   json_pure
   nokogiri
   sinatra
-  yakkety!
