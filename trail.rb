@@ -37,4 +37,24 @@ class TrailApp < Sinatra::Application
       n['d'].gsub(/\s+/, ' ')
     }.to_json
   end
+  
+  get '/js/waypoints.js' do
+    doc = Nokogiri::XML(File.open(File.expand_path('../public/svg/waypoints.xml', __FILE__)))
+    content_type 'text/javascript'
+    result = StringIO.new('')
+    result.puts "function drawWaypoints() {"
+    result.puts "  var waypoints = ["
+    doc.xpath('//string').each { |n|
+      color = (n['color'] || 'black').to_json
+      pos = (n["x-pos"].to_f / 24.1375)-0.347246653060874
+      text = n.text.to_json
+      result.puts(%{    [#{pos}, #{text}, #{color}],})
+    }
+    result.puts "  null];"
+    result.puts "  waypoints.pop();"
+    result.puts "  var drawNextWaypoint = function() { var wp = waypoints.shift(); $tc.drawWaypoint(wp[0],wp[1],wp[2]); if (waypoints.length > 0) { setTimeout(drawNextWaypoint, 1) }}"
+    result.puts "  drawNextWaypoint();"
+    result.puts "}"
+    result.string
+  end
 end

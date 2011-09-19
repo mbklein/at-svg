@@ -2,10 +2,10 @@ Marker = (function($) {
   return function(controller,one_mile,margin) {
     var paper, objects;
         
-    var createObjects = function(pos,contourPos) {
-      var y = contourPos.y;
-      var pathSpec = 'M'+pos+' '+(y)+'L'+pos+' '+y;
-      objects.push(paper.text(pos, y-15, '☟')).attr({
+    var createObjects = function(x,y) {
+      $.each(objects.items, function(i) { objects.items[i].remove() });
+      var pathSpec = 'M'+x+' '+(y)+'L'+x+' '+y;
+      objects.push(paper.text(x, y-15, '☟')).attr({
         'font-size': '24pt', 
         'font-weight': 'normal',
         'fill': 'red', 
@@ -21,84 +21,65 @@ Marker = (function($) {
       initialize: function(mi) {
         paper = Raphael('overlay', $('#overlay').width(), $('#overlay').height());
         objects = paper.set();
-        var pos = (one_mile * mi) + margin;
-        this.contourPos = controller.contourAt(pos);
-        console.debug(mi + ' : ' + this.contourPos.x);
-        this.objects = createObjects(pos,this.contourPos);
-        this.position = pos;
+        this.contourPos = controller.contourAtMile(mi);
+//        console.debug(mi + ' : ' + this.contourPos.x);
+        this.objects = createObjects(this.contourPos.x,this.contourPos.y);
+        this.position = mi;
       },
 
       moveTo: function(mi) {
-        var pos = (one_mile * mi) + margin;
-        var ocp = this.contourPos;
-        var ncp = controller.contourAt(pos);
-        var paper = controller.paper;
-        var startPoint = ocp.at;
-        var endPoint = ncp.at;
-        var removablePaths = [];
-        
-        var subPath = function(p, s, e) {
-          if (s == null && e == null) { return p }
-          if (s == null) { s = 0 }
-          if (e == null) { e = p.getTotalLength() }
-          var result = paper.path(p.getSubpath(s,e)).attr({stroke:'none'});
-          removablePaths.push(result);
-          return result;
-        }
-        var paths = [];
-        if (ocp.pathIndex < ncp.pathIndex || startPoint < endPoint) {
-          if (ocp.pathIndex == ncp.pathIndex) {
-            paths.push(subPath(ocp.path,startPoint,endPoint));
-          } else {
-            paths.push(subPath(ocp.path,startPoint));
-            var i = ocp.pathIndex + 1;
-            while (i < ncp.pathIndex) {
-              var somePath = controller.stuff.contour.items[i];
-              paths.push(subPath(somePath));
-              i += 1;
-            }
-            paths.push(subPath(ncp.path,0,endPoint));
-          }
-        } else {
-          if (ocp.pathIndex == ncp.pathIndex) {
-            paths.push(subPath(ocp.path,startPoint,endPoint));
-          } else {
-            paths.push(subPath(ocp.path,0,startPoint));
-            var i = ocp.pathIndex - 1;
-            while (i > ncp.pathIndex) {
-              var somePath = controller.stuff.contour.items[i];
-              paths.push(subPath(somePath));
-              i -= 1;
-            }
-            paths.push(subPath(ncp.path,endPoint));
-          }
-        }
-        
-        console.debug("Animating along " + paths.length + " paths")
-        var ms = 15000 / paths.length;
-        setTimeout(function() { controller.scrollTo(mi); }, 3000);
-        console.debug('Starting animation...')        
-        if (startPoint < endPoint) {
-          var animateProc = function(paths,i) {
-            if (i >= 0) {
-              objects.animateAlong(paths[i], ms, function() { animateProc(paths,i-1) })
+        var x1 = Math.min(this.position,mi),
+            x2 = Math.max(this.position,mi),
+            px1 = controller.milesToPixels(x1),
+            px2 = controller.milesToPixels(x2);
+            
+        var pos = this.position;
+        if (px2 - px1 < controller.viewport.width()) {
+          // Less than one screen? Just center it and go.
+          var path = controller.getSubContour(x1,x2);
+          console.dir(path);
+          controller.scrollTo((x1+x2)/2, function() {
+            if (pos < mi) {
+              objects.animateAlong(path,5000, function() { path.remove() });
             } else {
-              $.each(removablePaths,function(p) { removablePaths[p].remove() })
+              objects.animateAlongBack(path,5000, function() { path.remove() });
             }
-          }
-          animateProc(paths, paths.length - 1);
+          });
         } else {
-          var animateProc = function(paths,i) {
-            if (i < paths.length) {
-              objects.animateAlongBack(paths[i], ms, function() { animateProc(paths,i+1) })
-            } else {
-              $.each(removablePaths,function(p) { removablePaths[p].remove() })
-            }
+          // Otherwise, use one path to get us off the screen, and another to reenter
+          var path1 = controller.getSubContour(x1, x1+40);
+          var path2 = controller.getSubContour(x2-40, x2);
+          if (pos < mi) {
+            objects.animateAlong(path1,5000,function() { 
+              controller.scrollTo(x2, function() {
+                var node = path2.attr('path')[0];
+                createObjects(node[1],node[2]);
+                objects.animateAlong(path2,5000,function() {
+                  setTimeout(function() { 
+                    path1.remove();
+                    path2.remove();
+                  }, 1000);
+                })
+              });
+            });
+          } else {
+            objects.animateAlongBack(path2,5000,function() { 
+              controller.scrollTo(x1, function() {
+                var path = path1.attr('path');
+                var node = path[path.length-1];
+                createObjects(node[1],node[2]);
+                objects.animateAlongBack(path1,5000,function() {
+                  setTimeout(function() { 
+                    path1.remove();
+                    path2.remove();
+                  }, 1000);
+                })
+              });
+            });
           }
-          animateProc(paths, 0);
         }
-        this.contourPos = ncp;
-        this.position = pos;
+        
+        this.position = mi;
       }
     }
   }
