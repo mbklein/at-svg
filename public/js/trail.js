@@ -297,6 +297,11 @@ $tc = (function($) {
         callback(shape);
       }
       // console.debug(shape.attr('path').map(function(n) { return n.join(' ') }).join(''))
+    },
+    
+    debugMode: function() {
+      $('#profile').css('overflow-x', 'visible')
+      $('#container').css('overflow-x', 'auto')
     }
   };
   return $t;
