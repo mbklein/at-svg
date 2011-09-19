@@ -206,7 +206,7 @@ $tc = (function($) {
     },
 
     contourAtMile: function(mi) {
-      var result = this.contourAt(one_mile * mi);
+      var result = this.contourAt(one_mile * Math.max(mi,0.1));
       if (result == null) { console.warn("Warning: null contour at "+mi) }
       return result;
     },

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <labels xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:svg="http://www.w3.org/2000/svg">
-   <string x-pos="8.381666088256843" mi="0.000" index="0">Springer Mtn.</string>
+   <string x-pos="8.381666088256843" mi="0.000" index="0" x="26.310865956419647" y="165.02398400000112">Springer Mtn.</string>
    <string x-pos="109.98794927612306" mi="4.210" index="1" x="125.46539083715287" y="200.4872639067066">Three Forks</string>
    <string x-pos="193.97968664184572" mi="7.689" index="2" x="209.39692175201196" y="181.7053040000011" color="green">Hawk Mountain Shelter</string>
    <string x-pos="206.89785375610353" mi="8.225" index="3" x="222.32802280701753" y="190.87919980240534">Hightower Gap</string>
