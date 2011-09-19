@@ -2,374 +2,374 @@
 <labels xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:svg="http://www.w3.org/2000/svg">
    <string x-pos="8.381666088256843" mi="0.000" index="0">Springer Mtn.</string>
    <string x-pos="109.98794927612306" mi="4.210" index="1" x="125.46539083715287" y="200.4872639067066">Three Forks</string>
-   <string x-pos="193.97968664184572" mi="7.689" index="2" x="209.39692175201196" y="181.7053040000011">Hawk Mountain Shelter</string>
+   <string x-pos="193.97968664184572" mi="7.689" index="2" x="209.39692175201196" y="181.7053040000011" color="green">Hawk Mountain Shelter</string>
    <string x-pos="206.89785375610353" mi="8.225" index="3" x="222.32802280701753" y="190.87919980240534">Hightower Gap</string>
    <string x-pos="306.2800826074219" mi="12.342" index="4" x="321.65142400749903" y="183.6407317784267">Justus Mtn.</string>
-   <string x-pos="370.66912069335945" mi="15.010" index="5" x="386.0174270201014" y="189.74128991699322">Gooch Mtn. Shelter</string>
+   <string x-pos="370.66912069335945" mi="15.010" index="5" x="386.0174270201014" y="189.74128991699322" color="green">Gooch Mtn. Shelter</string>
    <string x-pos="405.437683010254" mi="16.450" index="6" x="420.75769851116127" y="193.29948558007916">Gooch Gap</string>
    <string x-pos="492.33137502685554" mi="20.050" index="7" x="507.6083772388108" y="181.9900641481492">Woody Gap</string>
    <string x-pos="689.2794264794923" mi="28.210" index="8" x="704.4699156881497" y="144.24943200000115">Blood Mountain</string>
    <string x-pos="748.1850661279298" mi="30.651" index="9" x="763.3595009032032" y="185.03951822222336">Neels Gap</string>
-   <string x-pos="897.8354109765626" mi="36.851" index="10" x="912.935669823044" y="170.2549121944457">Whitley Gap Shelter</string>
-   <string x-pos="1008.8662184716798" mi="41.451" index="11" x="1023.9115370861518" y="185.00146400000125">Low Gap Shelter</string>
-   <string x-pos="1175.86458578125" mi="48.6105" index="12" x="1196.63582440576" y="161.088643008001">Blue Mtn.\nShelter</string>
+   <string x-pos="897.8354109765626" mi="36.851" index="10" x="912.935669823044" y="170.2549121944457" color="green">Whitley Gap Shelter</string>
+   <string x-pos="1008.8662184716798" mi="41.451" index="11" x="1023.9115370861518" y="185.00146400000125" color="green">Low Gap Shelter</string>
+   <string x-pos="1175.86458578125" mi="48.6105" index="12" x="1196.63582440576" y="161.088643008001" color="green">Blue Mtn.\nShelter</string>
    <string x-pos="1235.7553328515626" mi="50.851" index="14" x="1250.688309319459" y="185.1487996296309">Unicoi Gap</string>
    <string x-pos="1316.836570644531" mi="54.210" index="15" x="1331.7248176100632" y="170.61865140000128">Cheese Factory</string>
    <string x-pos="1328.4616316796873" mi="54.692" index="16" x="1343.353158484154" y="163.1446203703717">Campsite</string>
    <string x-pos="1361.1123885156248" mi="56.045" index="17" x="1375.994538572629" y="147.53584416000137">Tray Mtn.</string>
    <string x-pos="1486.781639003906" mi="61.251" index="18" x="1501.5902700882243" y="173.06445553240874">Sassafras Gap</string>
-   <string x-pos="1551.9519270898436" mi="63.951" index="19" x="1566.7282791339615" y="164.42344725000132">Deep Gap Shelter</string>
+   <string x-pos="1551.9519270898436" mi="63.951" index="19" x="1566.7282791339615" y="164.42344725000132" color="green">Deep Gap Shelter</string>
    <string x-pos="1630.6193770410155" mi="67.451" index="20" x="1651.16643900807" y="187.666678625001">Dicks Creek Gap\n(Hiawassee)</string>
-   <string x-pos="1738.2600630761717" mi="71.911" index="22" x="1758.76477987621" y="177.459042795103">Plumorchard\nGap Shelter</string>
+   <string x-pos="1738.2600630761717" mi="71.911" index="22" x="1758.76477987621" y="177.459042795103" color="green">Plumorchard\nGap Shelter</string>
    <string x-pos="1850.6762923242186" color="red" mi="76.328" index="24" x="1865.3257376373278" y="149.64894335937626">GA / NC State Line</string>
-   <string x-pos="1914.7111739160155" mi="79.191" index="25" x="1934.39615241434" y="137.774490074075">Muskrat Creek\nShelter</string>
-   <string x-pos="2033.7097395898436" mi="83.911" index="27" x="2048.267042301707" y="125.07264306235905">Standing Indian\nShelter</string>
-   <string x-pos="2217.0642317773436" mi="91.507" index="28" x="2231.5219744170477" y="130.92788355555686">Carter Gap\nShelter</string>
+   <string x-pos="1914.7111739160155" mi="79.191" index="25" x="1934.39615241434" y="137.774490074075" color="green">Muskrat Creek\nShelter</string>
+   <string x-pos="2033.7097395898436" mi="83.911" index="27" x="2048.267042301707" y="125.07264306235905" color="green">Standing Indian\nShelter</string>
+   <string x-pos="2217.0642317773436" mi="91.507" index="28" x="2231.5219744170477" y="130.92788355555686" color="green">Carter Gap\nShelter</string>
    <string x-pos="2371.1499251367186" mi="97.891" index="29" x="2385.5371780274127" y="125.96284806997217">Albert Mtn.</string>
-   <string x-pos="2381.407646083984" mi="98.5265" index="30" x="2400.8687353417" y="127.038827665156">Big Spring\nShelter</string>
+   <string x-pos="2381.407646083984" mi="98.5265" index="30" x="2400.8687353417" y="127.038827665156" color="green">Big Spring\nShelter</string>
    <string x-pos="2600.932639980469" mi="107.652" index="32" x="2621.02314332202" y="156.079475710939">Winding Stair Gap\n(Franklin)</string>
-   <string x-pos="2689.2633284570315" mi="111.3115" index="34" x="2709.30927076753" y="127.752170300036">Siler Bald\nShelter</string>
-   <string x-pos="2982.299522304688" mi="123.452" index="36" x="3002.20112218226" y="122.894985407407">Cold Spring\nShelter</string>
+   <string x-pos="2689.2633284570315" mi="111.3115" index="34" x="2709.30927076753" y="127.752170300036" color="green">Siler Bald\nShelter</string>
+   <string x-pos="2982.299522304688" mi="123.452" index="36" x="3002.20112218226" y="122.894985407407" color="green">Cold Spring\nShelter</string>
    <string x-pos="3075.005821132813" mi="127.052" index="38" x="3089.0518009099096" y="149.64086639999994">Tellico Gap</string>
-   <string x-pos="3126.6424788476565" mi="129.192" index="39" x="3140.67970437579" y="155.07466855555555">Wesser Bald Shelter</string>
-   <string x-pos="3246.379417324219" mi="134.152" index="40" x="3260.340639511662" y="225.87877314843746">Rufus Morgan Shelter</string>
+   <string x-pos="3126.6424788476565" mi="129.192" index="39" x="3140.67970437579" y="155.07466855555555" color="green">Wesser Bald Shelter</string>
+   <string x-pos="3246.379417324219" mi="134.152" index="40" x="3260.340639511662" y="225.87877314843746" color="green">Rufus Morgan Shelter</string>
    <string x-pos="3264.7125472070315" mi="134.912" index="41" x="3278.675782798611" y="220.6914695722656">Nantahala Outdoor Center</string>
-   <string x-pos="3426.5460433007815" mi="141.827" index="42" x="3445.5014615213" y="133.425736393518">Sassafras Gap\nShelter</string>
+   <string x-pos="3426.5460433007815" mi="141.827" index="42" x="3445.5014615213" y="133.425736393518" color="green">Sassafras Gap\nShelter</string>
    <string x-pos="3460.223411464844" mi="143.012" index="44" x="3474.0898099358224" y="139.91052718518517">Cheoah Bald</string>
    <string x-pos="3700.1577986718753" mi="152.953" index="45" x="3713.9183091668124" y="168.94716178400003">Hogback Gap</string>
    <string x-pos="3777.3965682031253" mi="156.153" index="46" x="3791.118912480278" y="189.81423865300005">Yellow Creek Gap</string>
-   <string x-pos="3799.119895839844" mi="157.053" index="47" x="3812.831582162191" y="175.49720648688054">Cable Gap Shelter</string>
+   <string x-pos="3799.119895839844" mi="157.053" index="47" x="3812.831582162191" y="175.49720648688054" color="green">Cable Gap Shelter</string>
    <string x-pos="3930.7412947656253" mi="162.506" index="48" x="3944.3862352460446" y="225.99233297600006">Fontana Dam</string>
    <string x-pos="4070.8929671289065" mi="168.313" index="49" x="4084.48120507145" y="163.32700725">Shuckstack</string>
-   <string x-pos="4225.362266445312" mi="174.953" index="50" x="4244.67245694689" y="135.310592587632">Mollies Ridge\nShelter</string>
-   <string x-pos="4284.728416347656" mi="177.413" index="52" x="4304.02042074412" y="142.593955124479">Russell Field\nShelter</string>
-   <string x-pos="4355.702842617187" mi="180.3535" index="54" x="4374.96053763263" y="124.380571707739">Spence Field\nShelter</string>
+   <string x-pos="4225.362266445312" mi="174.953" index="50" x="4244.67245694689" y="135.310592587632" color="green">Mollies Ridge\nShelter</string>
+   <string x-pos="4284.728416347656" mi="177.413" index="52" x="4304.02042074412" y="142.593955124479" color="green">Russell Field\nShelter</string>
+   <string x-pos="4355.702842617187" mi="180.3535" index="54" x="4374.96053763263" y="124.380571707739" color="green">Spence Field\nShelter</string>
    <string x-pos="4390.480064296875" mi="181.553" index="56" x="4403.8987012809175" y="111.0341680758018">Rocky Top</string>
    <string x-pos="4403.497337246094" mi="182.093" index="57" x="4416.926303090065" y="122.31651081250007">Thunderhead</string>
-   <string x-pos="4506.790183925781" mi="186.613" index="58" x="4525.97215527034" y="131.015323904664">Derrick Knob\nShelter</string>
+   <string x-pos="4506.790183925781" mi="186.613" index="58" x="4525.97215527034" y="131.015323904664" color="green">Derrick Knob\nShelter</string>
    <string x-pos="4644.868797207031" mi="192.093" index="60" x="4658.178188444646" y="115.09928453125008">Silers Bald</string>
    <string x-pos="4742.139305019531" mi="196.123" index="61" x="4755.402698242543" y="81.5319380000001">Clingmans</string>
    <string x-pos="4833.128074550781" mi="199.893" index="62" x="4846.354659021221" y="96.81013866666675">Mt. Collins</string>
    <string x-pos="4942.477744960937" mi="204.6035" index="63" x="4959.9963596175" y="112.703227352397">Newfound Gap\n(to Gatlinberg)</string>
-   <string x-pos="5014.770225429687" mi="207.6285" index="65" x="5032.97505493726" y="108.508455532">Icewater Spring\nShelter</string>
+   <string x-pos="5014.770225429687" mi="207.6285" index="65" x="5032.97505493726" y="108.508455532" color="green">Icewater Spring\nShelter</string>
    <string x-pos="5038.304160976562" mi="208.393" index="67" x="5051.418761572616" y="113.54925150000004">Charlies Bunion</string>
-   <string x-pos="5192.535118007812" mi="214.9935" index="68" x="5210.65706850091" y="100.9303788125">Peck's Corner\nShelter</string>
+   <string x-pos="5192.535118007812" mi="214.9935" index="68" x="5210.65706850091" y="100.9303788125" color="green">Peck's Corner\nShelter</string>
    <string x-pos="5303.874229335937" mi="219.396" index="70" x="5316.868211028262" y="94.69608720699688">Chapman</string>
-   <string x-pos="5318.284629726562" mi="220.1735" index="71" x="5335.62554511458" y="92.5253871406248">Tri-Corner\nKnob Shelter</string>
-   <string x-pos="5504.7537459375" mi="227.9285" index="73" x="5522.71638220706" y="133.256509182877">Cosby Knob\nShelter</string>
+   <string x-pos="5318.284629726562" mi="220.1735" index="71" x="5335.62554511458" y="92.5253871406248" color="green">Tri-Corner\nKnob Shelter</string>
+   <string x-pos="5504.7537459375" mi="227.9285" index="73" x="5522.71638220706" y="133.256509182877" color="green">Cosby Knob\nShelter</string>
    <string x-pos="5571.488365078125" mi="230.6935" index="75" x="5589.4225285076" y="128.968878452675">Side Trail to\nFire Tower</string>
-   <string x-pos="5676.059287929687" mi="235.026" index="77" x="5693.94490783747" y="203.145377502271">Davenport Gap\nShelter</string>
+   <string x-pos="5676.059287929687" mi="235.026" index="77" x="5693.94490783747" y="203.145377502271" color="green">Davenport Gap\nShelter</string>
    <string x-pos="5703.45247640625" mi="235.951" index="79" x="5716.260707232773" y="217.50836799999976">Davenport Gap</string>
    <string x-pos="5748.336509609375" mi="237.810" index="80" x="5761.10943272019" y="228.47822399999978">Interstate-40</string>
    <string x-pos="5760.492881679687" mi="238.314" index="81" x="5773.2685277420605" y="227.30720987528426">Green Corner Rd.</string>
    <string x-pos="5873.937705898437" mi="243.014" index="82" x="5886.656913858715" y="151.3032977949217">Snowbird mtn.</string>
-   <string x-pos="5929.444297695312" mi="245.5545" index="83" x="5947.94695533305" y="185.875489864312">Groundhog Creek\nShelter</string>
+   <string x-pos="5929.444297695312" mi="245.5545" index="83" x="5947.94695533305" y="185.875489864312" color="green">Groundhog Creek\nShelter</string>
    <string x-pos="6088.758262539062" mi="251.914" index="85" x="6101.371091824291" y="138.7224321141996">Max Patch</string>
-   <string x-pos="6127.369102382812" mi="253.755" index="86" x="6145.78556391807" y="154.299883436334">Roaring Fork\nShelter</string>
-   <string x-pos="6244.664634609375" mi="258.6145" index="88" x="6263.02191760613" y="154.6370975">Walnut Mtn\nShelter</string>
+   <string x-pos="6127.369102382812" mi="253.755" index="86" x="6145.78556391807" y="154.299883436334" color="green">Roaring Fork\nShelter</string>
+   <string x-pos="6244.664634609375" mi="258.6145" index="88" x="6263.02191760613" y="154.6370975" color="green">Walnut Mtn\nShelter</string>
    <string x-pos="6308.4060896875" mi="261.014" index="90" x="6320.910307496962" y="139.50731800799986">Bluff Mtn.</string>
-   <string x-pos="6483.622154140625" mi="268.5145" index="91" x="6501.86128410717" y="204.20859796793">Deer Park Mountain\nShelter</string>
+   <string x-pos="6483.622154140625" mi="268.5145" index="91" x="6501.86128410717" y="204.20859796793" color="green">Deer Park Mountain\nShelter</string>
    <string x-pos="6567.650474453125" mi="271.755" index="93" x="6580.038957556319" y="241.8913184934171">Hot Springs NC</string>
    <string x-pos="6601.441978359375" mi="273.155" index="94" x="6613.814221505959" y="222.00190828799987">Lovers Leap Rock</string>
    <string x-pos="6710.059532070312" mi="277.655" index="95" x="6722.377569915521" y="204.15683320444595">Overpass for US 25 &amp; 70</string>
    <string x-pos="6764.598106289062" mi="279.915" index="96" x="6776.900496005657" y="173.88296278189287">Rich Mtn. Fire Tower</string>
-   <string x-pos="6833.158897304687" mi="282.755" index="97" x="6845.416031446359" y="175.23287999999994">Spring Mtn. Shelter</string>
+   <string x-pos="6833.158897304687" mi="282.755" index="97" x="6845.416031446359" y="175.23287999999994" color="green">Spring Mtn. Shelter</string>
    <string x-pos="6922.46614828125" mi="286.455" index="98" x="6934.679229027553" y="205.80945119999996">Allen Gap</string>
-   <string x-pos="7033.949302578125" mi="291.315" index="99" x="7051.92764530988" y="155.254049351166">Little Laurel\nShelter</string>
-   <string x-pos="7199.058555507812" mi="298.1555" index="101" x="7216.95599748668" y="142.807231">Jerry Cabin\nShelter</string>
-   <string x-pos="7346.303428554687" mi="304.015" index="103" x="7358.3175397101995" y="174.96212800000006">Flint Mtn. Shelter</string>
+   <string x-pos="7033.949302578125" mi="291.315" index="99" x="7051.92764530988" y="155.254049351166" color="green">Little Laurel\nShelter</string>
+   <string x-pos="7199.058555507812" mi="298.1555" index="101" x="7216.95599748668" y="142.807231" color="green">Jerry Cabin\nShelter</string>
+   <string x-pos="7346.303428554687" mi="304.015" index="103" x="7358.3175397101995" y="174.96212800000006" color="green">Flint Mtn. Shelter</string>
    <string x-pos="7412.450279140625" mi="306.756" index="104" x="7424.44468148589" y="173.15175044177317">Devil Fork Gap</string>
-   <string x-pos="7553.874229335937" mi="312.856" index="105" x="7571.60833155219" y="144.682123015625">Hogback Ridge\nShelter</string>
+   <string x-pos="7553.874229335937" mi="312.856" index="105" x="7571.60833155219" y="144.682123015625" color="green">Hogback Ridge\nShelter</string>
    <string x-pos="7617.527793789062" mi="315.252" index="107" x="7629.412283283144" y="156.31834900000004">Sams Gap I-26</string>
    <string x-pos="7706.835655117187" mi="318.952" index="108" x="7718.675480864339" y="130.3400928027344">Low Gap</string>
-   <string x-pos="7796.683067226562" mi="322.9155" index="109" x="7814.29566562463" y="127.47127275">Bald Mtn\nShelter</string>
+   <string x-pos="7796.683067226562" mi="322.9155" index="109" x="7814.29566562463" y="127.47127275" color="green">Bald Mtn\nShelter</string>
    <string x-pos="7941.053794765625" mi="328.656" index="111" x="7952.786310412425" y="173.12739997066708">Spivey Gap</string>
-   <string x-pos="8057.861045742187" mi="333.496" index="112" x="8069.552222924042" y="181.31750003703743">No Business Shelter</string>
+   <string x-pos="8057.861045742187" mi="333.496" index="112" x="8069.552222924042" y="181.31750003703743" color="green">No Business Shelter</string>
    <string x-pos="8211.389488125" mi="339.856" index="113" x="8222.988422009556" y="226.43683122222254">Nolichucky River (ERWIN)</string>
-   <string x-pos="8312.765830898437" mi="344.056" index="114" x="8324.31421385848" y="179.7569467968753">Curley Maple Shelter</string>
+   <string x-pos="8312.765830898437" mi="344.056" index="114" x="8324.31421385848" y="179.7569467968753" color="green">Curley Maple Shelter</string>
    <string x-pos="8411.728233242187" mi="348.156" index="115" x="8423.227486853859" y="167.548390688047">Indian Grave Gap</string>
    <string x-pos="8467.155479335937" mi="350.453" index="116" x="8478.643044919807" y="146.7617080000004">Beauty Spot</string>
    <string x-pos="8541.0916365625" mi="353.516" index="117" x="8552.538497403915" y="122.33758556481517">Unaka Mtn.</string>
-   <string x-pos="8621.720909023437" mi="356.857" index="118" x="8633.140752300882" y="151.47572900000034">Cherry Gap Shelter</string>
+   <string x-pos="8621.720909023437" mi="356.857" index="118" x="8633.140752300882" y="151.47572900000034" color="green">Cherry Gap Shelter</string>
    <string x-pos="8696.458457851562" mi="359.953" index="119" x="8707.832336006659" y="153.3852525267493">Iron Mtn. Gap</string>
-   <string x-pos="8837.970298671875" mi="366.057" index="120" x="8855.0924868271" y="131.140381446">Clyde Smith\nShelter</string>
+   <string x-pos="8837.970298671875" mi="366.057" index="120" x="8855.0924868271" y="131.140381446" color="green">Clyde Smith\nShelter</string>
    <string x-pos="8918.608116054687" mi="369.157" index="122" x="8929.880571287016" y="120.95940112500034">Hughes Gap</string>
    <string x-pos="9027.589439296875" mi="373.672" index="123" x="9038.805797524612" y="104.93627862500034">Carvers</string>
-   <string x-pos="9108.218711757812" mi="377.2535" index="124" x="9125.21016026436" y="131.942949729167">Stan Murray\nShelter</string>
-   <string x-pos="9148.362754726562" mi="378.9165" index="126" x="9165.33034879882" y="118.520297904">Overmountain\nShelter</string>
-   <string x-pos="9364.529746914062" mi="387.632" index="128" x="9375.593429479608" y="177.26034107783374">Apple House Shelter</string>
-   <string x-pos="9582.831138515625" mi="396.917" index="129" x="9599.59580503134" y="174.135159703206">Mountaineer\nShelter</string>
-   <string x-pos="9820.360435390625" mi="406.517" index="131" x="9831.197614971736" y="157.5397099531253">Moreland Shelter</string>
+   <string x-pos="9108.218711757812" mi="377.2535" index="124" x="9125.21016026436" y="131.942949729167" color="green">Stan Murray\nShelter</string>
+   <string x-pos="9148.362754726562" mi="378.9165" index="126" x="9165.33034879882" y="118.520297904" color="green">Overmountain\nShelter</string>
+   <string x-pos="9364.529746914062" mi="387.632" index="128" x="9375.593429479608" y="177.26034107783374" color="green">Apple House Shelter</string>
+   <string x-pos="9582.831138515625" mi="396.917" index="129" x="9599.59580503134" y="174.135159703206" color="green">Mountaineer\nShelter</string>
+   <string x-pos="9820.360435390625" mi="406.517" index="131" x="9831.197614971736" y="157.5397099531253" color="green">Moreland Shelter</string>
    <string x-pos="9965.1834334375" mi="412.517" index="132" x="9975.948746184486" y="217.82805071219238">Dennis Cove</string>
-   <string x-pos="10011.044029140625" mi="414.417" index="133" x="10021.786604401856" y="179.6600248750002">Laurel Fork Shelter</string>
+   <string x-pos="10011.044029140625" mi="414.417" index="133" x="10021.786604401856" y="179.6600248750002" color="green">Laurel Fork Shelter</string>
    <string x-pos="10030.265830898437" mi="415.214" index="134" x="10041.014379664615" y="165.14775696875026">U.S. 321</string>
-   <string x-pos="10218.614829921875" mi="423.258" index="135" x="10235.0773962438" y="207.180648358137">Watauga Lake\nShelter</string>
-   <string x-pos="10381.770347500002" mi="430.0175" index="137" x="10398.1516081493" y="165.07887425">Vandeventer\nShelter</string>
-   <string x-pos="10551.715415859377" mi="436.818" index="139" x="10562.214952784654" y="156.2866121386718">Iron Mtn. Shelter</string>
-   <string x-pos="10735.519126796877" mi="444.433" index="140" x="10745.928263482168" y="169.25424081049562">Double Springs Shelter</string>
-   <string x-pos="10936.472495937502" mi="452.758" index="141" x="10946.770458039859" y="169.10843064062493">Abingdon Gap Shelter</string>
+   <string x-pos="10218.614829921875" mi="423.258" index="135" x="10235.0773962438" y="207.180648358137" color="green">Watauga Lake\nShelter</string>
+   <string x-pos="10381.770347500002" mi="430.0175" index="137" x="10398.1516081493" y="165.07887425" color="green">Vandeventer\nShelter</string>
+   <string x-pos="10551.715415859377" mi="436.818" index="139" x="10562.214952784654" y="156.2866121386718" color="green">Iron Mtn. Shelter</string>
+   <string x-pos="10735.519126796877" mi="444.433" index="140" x="10745.928263482168" y="169.25424081049562" color="green">Double Springs Shelter</string>
+   <string x-pos="10936.472495937502" mi="452.758" index="141" x="10946.770458039859" y="169.10843064062493" color="green">Abingdon Gap Shelter</string>
    <string x-pos="11092.788413906252" color="red" mi="459.235" index="142" x="11103.029304184021" y="196.69593847743053">TN / VA State Line</string>
    <string x-pos="11181.539634609377" mi="462.912" index="143" x="11191.7376224289" y="203.20741748799992">Damascus VA</string>
-   <string x-pos="11408.584312343752" mi="472.318" index="144" x="11418.659145793421" y="187.0870129999999">Saunders Shelter</string>
-   <string x-pos="11563.061851406252" mi="478.718" index="145" x="11573.060352420354" y="169.2143695500685">Lost Mtn. Shelter</string>
-   <string x-pos="11851.972984218752" mi="490.8985" index="146" x="11866.9172113765" y="121.009239176322">Thomas Knob\nShelter</string>
-   <string x-pos="11980.635093593752" mi="496.019" index="148" x="11990.450239272315" y="132.04366603606306">Wise Shelter</string>
+   <string x-pos="11408.584312343752" mi="472.318" index="144" x="11418.659145793421" y="187.0870129999999" color="green">Saunders Shelter</string>
+   <string x-pos="11563.061851406252" mi="478.718" index="145" x="11573.060352420354" y="169.2143695500685" color="green">Lost Mtn. Shelter</string>
+   <string x-pos="11851.972984218752" mi="490.8985" index="146" x="11866.9172113765" y="121.009239176322" color="green">Thomas Knob\nShelter</string>
+   <string x-pos="11980.635093593752" mi="496.019" index="148" x="11990.450239272315" y="132.04366603606306" color="green">Wise Shelter</string>
    <string x-pos="12082.010826015627" mi="500.219" index="149" x="12091.77603112124" y="158.41826047199993">Pine Mountain</string>
-   <string x-pos="12123.043540859377" mi="501.919" index="150" x="12132.78885163152" y="165.48438809912528">Old Orchard Shelter</string>
+   <string x-pos="12123.043540859377" mi="501.919" index="150" x="12132.78885163152" y="165.48438809912528" color="green">Old Orchard Shelter</string>
    <string x-pos="12206.788658046877" mi="505.5985" index="151" x="12221.5574828477" y="178.557705264">Hurricane\nMountain</string>
-   <string x-pos="12238.166831875002" mi="506.8985" index="153" x="12252.9202279438" y="184.252568">Hurrican Mtn.\nShelter</string>
+   <string x-pos="12238.166831875002" mi="506.8985" index="153" x="12252.9202279438" y="184.252568" color="green">Hurrican Mtn.\nShelter</string>
    <string x-pos="12364.407066250002" mi="512.1595" index="155" x="12379.8428448289" y="163.663850104424">Dickey Gap\n(Troutdale)</string>
-   <string x-pos="12464.354576015627" mi="516.060" index="157" x="12473.943142711432" y="204.06991514062494">Trimpi Shelter</string>
-   <string x-pos="12720.207847500002" mi="526.660" index="158" x="12729.67014118729" y="167.07263936443135">Partnership Shelter</string>
+   <string x-pos="12464.354576015627" mi="516.060" index="157" x="12473.943142711432" y="204.06991514062494" color="green">Trimpi Shelter</string>
+   <string x-pos="12720.207847500002" mi="526.660" index="158" x="12729.67014118729" y="167.07263936443135" color="green">Partnership Shelter</string>
    <string x-pos="12999.221519375002" mi="538.219" index="159" x="13008.533195468654" y="191.90884489062486">VA 683-Atkins</string>
    <string x-pos="13193.296226406252" mi="546.260" index="160" x="13202.52383648227" y="194.69450717784062">Big Walker Mtn.</string>
    <string x-pos="13306.741050625002" mi="550.960" index="161" x="13315.912222598927" y="205.76381684374797">Brushy Mtn.</string>
-   <string x-pos="13337.142661953127" mi="552.220" index="162" x="13346.309960153603" y="192.52546324999798">Knot Maul Shelter</string>
-   <string x-pos="13548.564781093752" mi="561.22" index="163" x="13563.4366569727" y="163.261763151998">Chestnut Knob\nShelter</string>
-   <string x-pos="13796.686118984377" mi="571.259" index="165" x="13805.629424680192" y="194.48128187499793">Jenkins Shelter</string>
-   <string x-pos="14134.645103359377" mi="585.261" index="166" x="14143.430314553676" y="185.75267679687283">Helveys Mill Shelter</string>
-   <string x-pos="14371.188072109377" mi="595.061" index="167" x="14379.857162201168" y="199.80366377777568">Jenny Knob Shelter</string>
+   <string x-pos="13337.142661953127" mi="552.220" index="162" x="13346.309960153603" y="192.52546324999798" color="green">Knot Maul Shelter</string>
+   <string x-pos="13548.564781093752" mi="561.22" index="163" x="13563.4366569727" y="163.261763151998" color="green">Chestnut Knob\nShelter</string>
+   <string x-pos="13796.686118984377" mi="571.259" index="165" x="13805.629424680192" y="194.48128187499793" color="green">Jenkins Shelter</string>
+   <string x-pos="14134.645103359377" mi="585.261" index="166" x="14143.430314553676" y="185.75267679687283" color="green">Helveys Mill Shelter</string>
+   <string x-pos="14371.188072109377" mi="595.061" index="167" x="14379.857162201168" y="199.80366377777568" color="green">Jenny Knob Shelter</string>
    <string x-pos="14525.665611171877" mi="601.461" index="168" x="14534.2583688281" y="210.10153273437294">Suspension Bridge</string>
-   <string x-pos="14713.935874843752" mi="609.261" index="169" x="14722.434839404674" y="162.27014097599795">Wapiti Shelter</string>
-   <string x-pos="14915.710777187502" mi="617.621" index="170" x="14924.121415561103" y="181.66567503703493">Doc's Knob Shelter</string>
+   <string x-pos="14713.935874843752" mi="609.261" index="169" x="14722.434839404674" y="162.27014097599795" color="green">Wapiti Shelter</string>
+   <string x-pos="14915.710777187502" mi="617.621" index="170" x="14924.121415561103" y="181.66567503703493" color="green">Doc's Knob Shelter</string>
    <string x-pos="15114.612144375002" mi="625.862" index="171" x="15122.937094281815" y="229.51627799999798">Pearisburg</string>
-   <string x-pos="15277.768882656252" mi="632.621" index="172" x="15285.999243592976" y="177.83213599999794">Rice Field Shelter</string>
-   <string x-pos="15574.647544765627" mi="645.162" index="173" x="15588.5532330162" y="196.648179544004">Pine Swamp Branch\nShelter</string>
-   <string x-pos="15674.595054531252" mi="649.062" index="175" x="15682.641468304446" y="163.14343909374793">Bailey Gap Shelter</string>
-   <string x-pos="15887.001060390627" mi="657.862" index="176" x="15894.943127416476" y="174.25789924999918">War Spur Shelter</string>
-   <string x-pos="16026.019615078127" mi="663.622" index="177" x="16033.904213380716" y="212.66900228902833">Laurel Creek Shelter</string>
+   <string x-pos="15277.768882656252" mi="632.621" index="172" x="15285.999243592976" y="177.83213599999794" color="green">Rice Field Shelter</string>
+   <string x-pos="15574.647544765627" mi="645.162" index="173" x="15588.5532330162" y="196.648179544004" color="green">Pine Swamp Branch\nShelter</string>
+   <string x-pos="15674.595054531252" mi="649.062" index="175" x="15682.641468304446" y="163.14343909374793" color="green">Bailey Gap Shelter</string>
+   <string x-pos="15887.001060390627" mi="657.862" index="176" x="15894.943127416476" y="174.25789924999918" color="green">War Spur Shelter</string>
+   <string x-pos="16026.019615078127" mi="663.622" index="177" x="16033.904213380716" y="212.66900228902833" color="green">Laurel Creek Shelter</string>
    <string x-pos="16115.327476406252" mi="667.322" index="178" x="16123.167410961913" y="175.57270461224414">Keffer Oak</string>
-   <string x-pos="16180.497154140627" mi="670.022" index="179" x="16188.305420007651" y="177.14747175199923">Sarver Hollow Shelter</string>
-   <string x-pos="16326.296714687502" mi="676.063" index="180" x="16334.045683950353" y="225.40389362962887">Niday Shelter</string>
-   <string x-pos="16569.105552578127" mi="686.122" index="181" x="16576.720955428525" y="191.54743374343946">Pickle Branch Shelter</string>
+   <string x-pos="16180.497154140627" mi="670.022" index="179" x="16188.305420007651" y="177.14747175199923" color="green">Sarver Hollow Shelter</string>
+   <string x-pos="16326.296714687502" mi="676.063" index="180" x="16334.045683950353" y="225.40389362962887" color="green">Niday Shelter</string>
+   <string x-pos="16569.105552578127" mi="686.122" index="181" x="16576.720955428525" y="191.54743374343946" color="green">Pickle Branch Shelter</string>
    <string x-pos="16671.4578475" mi="690.363" index="182" x="16679.035880007406" y="217.79945327297582">Dragons Tooth</string>
    <string x-pos="16873.23274984375" mi="698.722" index="183" x="16880.6983309753" y="209.40757603124905">VA 311-Catawba</string>
-   <string x-pos="16898.3474959375" mi="699.763" index="184" x="16905.812652240715" y="188.7428414169087">Johns Spring Shelter</string>
+   <string x-pos="16898.3474959375" mi="699.763" index="184" x="16905.812652240715" y="188.7428414169087" color="green">Johns Spring Shelter</string>
    <string x-pos="16962.540611171877" mi="702.423" index="185" x="16969.985653745032" y="209.21771524799905">McAfee Knob</string>
    <string x-pos="17097.709068203127" mi="708.023" index="186" x="17105.086709543597" y="216.49687587499912">Tinker Cliffs</string>
-   <string x-pos="17124.259361171877" mi="709.123" index="187" x="17131.624416932602" y="214.12635199999914">Lamberts Meadow Shelter</string>
+   <string x-pos="17124.259361171877" mi="709.123" index="187" x="17131.624416932602" y="214.12635199999914" color="green">Lamberts Meadow Shelter</string>
    <string x-pos="17339.081138515627" mi="718.023" index="188" x="17346.33859489818" y="240.79650812499906">Tinker Creek</string>
    <string x-pos="17387.355064296877" mi="720.023" index="189" x="17394.588971969097" y="220.42796629629532">US 11-Troutville</string>
-   <string x-pos="17471.346763515627" mi="723.503" index="190" x="17478.54462807249" y="212.2251099999991">Fullhadt Knob Shelter</string>
-   <string x-pos="17621.48470296875" mi="729.723" index="191" x="17628.60330076304" y="217.756547124999">Wilson Creek Shelter</string>
-   <string x-pos="17798.663658046877" mi="737.064" index="192" x="17805.706309801837" y="206.93268799999908">Bobblets Gap Shelter</string>
+   <string x-pos="17471.346763515627" mi="723.503" index="190" x="17478.54462807249" y="212.2251099999991" color="green">Fullhadt Knob Shelter</string>
+   <string x-pos="17621.48470296875" mi="729.723" index="191" x="17628.60330076304" y="217.756547124999" color="green">Wilson Creek Shelter</string>
+   <string x-pos="17798.663658046877" mi="737.064" index="192" x="17805.706309801837" y="206.93268799999908" color="green">Bobblets Gap Shelter</string>
    <string x-pos="17875.902427578127" mi="740.264" index="193" x="17882.906913115305" y="211.784656249999">Bearwallow Gap</string>
-   <string x-pos="17952.164634609377" mi="743.423" index="194" x="17959.118383698817" y="234.11448798046777">Cover Mtn. Shelter</string>
+   <string x-pos="17952.164634609377" mi="743.423" index="194" x="17959.118383698817" y="234.11448798046777" color="green">Cover Mtn. Shelter</string>
    <string x-pos="18030.379966640627" mi="746.664" index="195" x="18037.308119742236" y="236.31794409602105">VA 614-Jennings Creek</string>
    <string x-pos="18068.021568203127" mi="748.223" index="196" x="18074.919288669014" y="235.4427923593955">Fork Mountain</string>
-   <string x-pos="18238.90657796875" mi="755.303" index="197" x="18245.72562350006" y="178.7574395312491">Cornelius Creek Shelter</string>
+   <string x-pos="18238.90657796875" mi="755.303" index="197" x="18245.72562350006" y="178.7574395312491" color="green">Cornelius Creek Shelter</string>
    <string x-pos="18339.335044765627" mi="759.464" index="198" x="18346.110532996103" y="173.23045137499915">Apple Orchard Mtn.</string>
-   <string x-pos="18367.323326015627" mi="760.624" index="199" x="18374.095751697234" y="171.42498054687417">Thunder Hill Shelter</string>
+   <string x-pos="18367.323326015627" mi="760.624" index="199" x="18374.095751697234" y="171.42498054687417" color="green">Thunder Hill Shelter</string>
    <string x-pos="18510.70833578125" mi="766.564" index="200" x="18517.399371597854" y="206.62354987304667">High Cock Knob</string>
-   <string x-pos="18666.134361171877" mi="773.004" index="201" x="18672.765585766207" y="261.6761059629627">Matts Creek Shelter</string>
+   <string x-pos="18666.134361171877" mi="773.004" index="201" x="18672.765585766207" y="261.6761059629627" color="green">Matts Creek Shelter</string>
    <string x-pos="18715.87435140625" mi="775.064" index="202" x="18722.46347414925" y="246.18073915624976">James River Foot Bridge</string>
-   <string x-pos="18761.695884609377" mi="776.963" index="203" x="18768.277207178086" y="209.7955632499998">Johns Hollow Shelter</string>
+   <string x-pos="18761.695884609377" mi="776.963" index="203" x="18768.277207178086" y="209.7955632499998" color="green">Johns Hollow Shelter</string>
    <string x-pos="18934.54622640625" mi="784.124" index="204" x="18941.0376822805" y="215.3235700639998">Bluff Mtn.</string>
-   <string x-pos="18973.16439046875" mi="785.724" index="205" x="18979.637983937235" y="222.67923599999978">Punchbowl Shelter</string>
+   <string x-pos="18973.16439046875" mi="785.724" index="205" x="18979.637983937235" y="222.67923599999978" color="green">Punchbowl Shelter</string>
    <string x-pos="19035.921958828127" mi="788.324" index="206" x="19042.363474129426" y="251.77644056949634">Rice Mountain</string>
-   <string x-pos="19202.4685896875" mi="795.224" index="207" x="19208.82727502409" y="199.10843977777745">Brown Mtn. Creek Shelter</string>
+   <string x-pos="19202.4685896875" mi="795.224" index="207" x="19208.82727502409" y="199.10843977777745" color="green">Brown Mtn. Creek Shelter</string>
    <string x-pos="19245.914634609377" mi="797.024" index="208" x="19252.25261438791" y="157.6914331999997">US 60-Buena Vista</string>
-   <string x-pos="19337.997154140627" mi="800.839" index="209" x="19344.290208650687" y="171.8754300305173">Cow Camp Gap Shelter</string>
+   <string x-pos="19337.997154140627" mi="800.839" index="209" x="19344.290208650687" y="171.8754300305173" color="green">Cow Camp Gap Shelter</string>
    <string x-pos="19366.600669765627" mi="802.024" index="210" x="19372.878557065203" y="166.42234612499976">Cold Mtn.</string>
-   <string x-pos="19584.195884609377" mi="811.040" index="211" x="19590.391256900893" y="173.54746715999966">Seeley Shelter</string>
+   <string x-pos="19584.195884609377" mi="811.040" index="211" x="19590.391256900893" y="173.54746715999966" color="green">Seeley Shelter</string>
    <string x-pos="19639.71224203125" mi="813.340" index="212" x="19645.87919053245" y="169.71528774999965">Fish Hatchery Rd</string>
-   <string x-pos="19659.0213240625" mi="816.1525" index="213" x="19713.7312832884" y="188.654953957726">Main Top Mtn\nShelter</string>
+   <string x-pos="19659.0213240625" mi="816.1525" index="213" x="19713.7312832884" y="188.654953957726" color="green">Main Top Mtn\nShelter</string>
    <string x-pos="19761.9607771875" mi="818.404" index="215" x="19768.049145276007" y="204.1117366406246">The Priest</string>
    <string x-pos="19867.215904140627" mi="822.765" index="216" x="19873.25909247914" y="224.42565303206962">VA 56-Tye River</string>
-   <string x-pos="19932.385581875" mi="825.465" index="217" x="19938.39710152488" y="181.14556749060822">Harpers Creek Shelter</string>
+   <string x-pos="19932.385581875" mi="825.465" index="217" x="19938.39710152488" y="181.14556749060822" color="green">Harpers Creek Shelter</string>
    <string x-pos="20011.4236678125" mi="828.740" index="218" x="20017.407093978505" y="188.8263983749996">Three Ridges</string>
-   <string x-pos="20081.42122640625" mi="831.640" index="219" x="20087.370140731335" y="200.63953344606375">Maupin Field Shelter</string>
+   <string x-pos="20081.42122640625" mi="831.640" index="219" x="20087.370140731335" y="200.63953344606375" color="green">Maupin Field Shelter</string>
    <string x-pos="20306.5115584375" mi="840.966" index="220" x="20312.36164901302" y="204.81876725925895">Humpback Mtn.</string>
-   <string x-pos="20462.42708578125" mi="847.425" index="221" x="20468.186241763542" y="222.55507044444403">Paul C. Wolfe Shelter</string>
+   <string x-pos="20462.42708578125" mi="847.425" index="221" x="20468.186241763542" y="222.55507044444403" color="green">Paul C. Wolfe Shelter</string>
    <string x-pos="20584.0896834375" mi="852.466" index="222" x="20589.801317170786" y="202.7305690399996">Rockfish Gap-Waynesboro</string>
    <string x-pos="20701.2283553125" mi="857.319" index="223" x="20706.880857133365" y="206.9868638075798">Bear Den Mtn.</string>
-   <string x-pos="20749.65853109375" mi="859.325" index="224" x="20755.275985335495" y="207.34375799999958">Calf Mtn. Shelter</string>
+   <string x-pos="20749.65853109375" mi="859.325" index="224" x="20755.275985335495" y="207.34375799999958" color="green">Calf Mtn. Shelter</string>
    <string x-pos="20856.838706875" mi="863.766" index="225" x="20862.415947621463" y="191.23858574399955">Turk Gap</string>
-   <string x-pos="21063.44271078125" mi="872.326" index="226" x="21068.927561484987" y="196.8050968129221">Blackrock Hut</string>
+   <string x-pos="21063.44271078125" mi="872.326" index="226" x="21068.927561484987" y="196.8050968129221" color="green">Blackrock Hut</string>
    <string x-pos="21139.15560140625" mi="875.463" index="227" x="21144.608277920717" y="191.31033306122401">Browns Gap</string>
    <string x-pos="21243.03255453125" mi="879.766" index="228" x="21248.418964188793" y="189.91556053800593">Loft Mtn. Campground</string>
    <string x-pos="21387.85677328125" mi="885.766" index="229" x="21393.170095401543" y="209.05906891199962">Pinefield Gap</string>
    <string x-pos="21513.36946859375" mi="890.967" index="230" x="21518.64520097446" y="193.91172137499962">Powell Gap</string>
    <string x-pos="21551.98763265625" mi="892.567" index="231" x="21557.245502631195" y="172.16615799999965">Smith Roach Gap</string>
    <string x-pos="21595.43489828125" mi="894.367" index="232" x="21600.67084199502" y="197.77097872053696">Hightop Mountain</string>
-   <string x-pos="21879.27767171875" mi="906.126" index="233" x="21884.358933983473" y="179.56956994169065">Bearfence Mtn. Hut</string>
+   <string x-pos="21879.27767171875" mi="906.126" index="233" x="21884.358933983473" y="179.56956994169065" color="green">Bearfence Mtn. Hut</string>
    <string x-pos="22051.62630453125" mi="913.267" index="234" x="22056.636905315183" y="174.39599313599973">Big Meadows Wayside</string>
-   <string x-pos="22157.8299178125" mi="917.667" index="235" x="22162.7877348712" y="177.26962796874975">Rock Spring Hut</string>
+   <string x-pos="22157.8299178125" mi="917.667" index="235" x="22162.7877348712" y="177.26962796874975" color="green">Rock Spring Hut</string>
    <string x-pos="22278.51595296875" mi="922.667" index="236" x="22283.413677548488" y="187.04848918518493">Stony Man Side Trail</string>
    <string x-pos="22395.81087484375" mi="927.527" index="237" x="22400.662093830815" y="174.55337999999975">The Pinnacle</string>
    <string x-pos="22498.16439046875" mi="931.767" index="238" x="22502.952893221158" y="188.51396124999985">Skyline Drive-Thornton Gap</string>
-   <string x-pos="22525.99642171875" mi="932.920" index="239" x="22530.76923560254" y="204.1117579999999">Pass Mtn. Hut</string>
-   <string x-pos="22581.6678084375" mi="935.227" index="240" x="22586.426045553842" y="206.63425062499985">Picnic Shelter</string>
+   <string x-pos="22525.99642171875" mi="932.920" index="239" x="22530.76923560254" y="204.1117579999999" color="green">Pass Mtn. Hut</string>
+   <string x-pos="22581.6678084375" mi="935.227" index="240" x="22586.426045553842" y="206.63425062499985" color="green">Picnic Shelter</string>
    <string x-pos="22705.744956875" mi="940.367" index="241" x="22710.429514626096" y="181.74711126562485">Elkwallow Gap</string>
    <string x-pos="22785.3982771875" mi="943.668" index="242" x="22790.066761981645" y="201.0205884639998">Hogback Mtn.</string>
-   <string x-pos="22843.32552328125" mi="946.068" index="243" x="22847.967214466746" y="185.69915299999985">Gravel Springs Hut</string>
+   <string x-pos="22843.32552328125" mi="946.068" index="243" x="22847.967214466746" y="185.69915299999985" color="green">Gravel Springs Hut</string>
    <string x-pos="22902.6931990625" mi="948.527" index="244" x="22907.291053075438" y="197.40116599999982">North Marshall Mtn.</string>
    <string x-pos="23096.7654646875" mi="956.568" index="245" x="23101.281694089055" y="241.05332843749974">Tom Floyd Wayside</string>
    <string x-pos="23166.76302328125" mi="959.468" index="246" x="23171.244740841885" y="228.01290581975397">US 522-Front Royal</string>
-   <string x-pos="23294.690269375" mi="964.768" index="247" x="23299.108240079815" y="245.462809747558">Jim and Molly Shelter</string>
-   <string x-pos="23427.444175625" mi="970.268" index="248" x="23431.796777024836" y="223.9581990145769">Manassas Gap Shelter</string>
-   <string x-pos="23535.0857771875" mi="974.728" index="249" x="23539.395117892975" y="231.19876658903047">Dicks Dome Shelter</string>
-   <string x-pos="23737.83724203125" mi="983.128" index="250" x="23742.04670159083" y="246.5752342222221">Rod HolloW Shelter</string>
-   <string x-pos="23904.3826521875" mi="990.028" index="251" x="23908.51050248549" y="257.002753458">Sam Moore Shelter</string>
+   <string x-pos="23294.690269375" mi="964.768" index="247" x="23299.108240079815" y="245.462809747558" color="green">Jim and Molly Shelter</string>
+   <string x-pos="23427.444175625" mi="970.268" index="248" x="23431.796777024836" y="223.9581990145769" color="green">Manassas Gap Shelter</string>
+   <string x-pos="23535.0857771875" mi="974.728" index="249" x="23539.395117892975" y="231.19876658903047" color="green">Dicks Dome Shelter</string>
+   <string x-pos="23737.83724203125" mi="983.128" index="250" x="23742.04670159083" y="246.5752342222221" color="green">Rod HolloW Shelter</string>
+   <string x-pos="23904.3826521875" mi="990.028" index="251" x="23908.51050248549" y="257.002753458" color="green">Sam Moore Shelter</string>
    <string x-pos="23976.7947615625" mi="993.028" index="252" x="23980.886068091862" y="247.41349937499993">Bears Den Hostel</string>
    <string x-pos="23992.2537459375" mi="993.668" index="253" x="23996.326188754556" y="250.93541699999997">Snickers Gap</string>
    <string x-pos="24070.93050375" mi="996.928" index="254" x="24074.97430338015" y="233.35228209053497">Devils Racecourse</string>
    <string x-pos="24167.4783553125" mi="1000.928" index="255" x="24171.47505752198" y="235.46180129154516">Blackburn Trail Center</string>
-   <string x-pos="24244.71712484375" mi="1004.128" index="256" x="24248.675660835448" y="245.51557464559625">David Lesser Shelter</string>
+   <string x-pos="24244.71712484375" mi="1004.128" index="256" x="24248.675660835448" y="245.51557464559625" color="green">David Lesser Shelter</string>
    <string x-pos="24411.662925625" color="red" mi="1011.045" index="257" x="24415.54958993521" y="271.87534640625006">VA / WVA State Line</string>
    <string x-pos="24453.11800375" mi="1012.762" index="258" x="24456.972538650592" y="275.8207877037037">Harper's Ferry</string>
    <string x-pos="24469.592613125" color="red" mi="1013.445" index="259" x="24473.450042420314" y="275.3387984725769">WVA / MD State Line</string>
    <string x-pos="24520.8572615625" mi="1015.569" index="260" x="24524.691942869624" y="256.540572">C&amp;O Canal Towpath</string>
-   <string x-pos="24622.2342146875" mi="1019.769" index="261" x="24626.01773471855" y="251.50878199549211">Ed Garvey Shelter</string>
-   <string x-pos="24721.19661703125" mi="1023.869" index="262" x="24724.93100771393" y="239.57369701234563">Crampton Gap Shelter</string>
+   <string x-pos="24622.2342146875" mi="1019.769" index="261" x="24626.01773471855" y="251.50878199549211" color="green">Ed Garvey Shelter</string>
+   <string x-pos="24721.19661703125" mi="1023.869" index="262" x="24724.93100771393" y="239.57369701234563" color="green">Crampton Gap Shelter</string>
    <string x-pos="24802.28548421875" mi="1027.229" index="263" x="24805.991641193068" y="249.815924125">Lambs Knoll</string>
-   <string x-pos="24841.88021078125" mi="1028.869" index="264" x="24845.55695039122" y="250.74513009600005">Rocky Run Shelter</string>
+   <string x-pos="24841.88021078125" mi="1028.869" index="264" x="24845.55695039122" y="250.74513009600005" color="green">Rocky Run Shelter</string>
    <string x-pos="24890.0662459375" mi="1030.865" index="265" x="24893.710826707993" y="239.6407375623177">Turners Gap</string>
    <string x-pos="25008.42806234375" mi="1035.769" index="266" x="25012.02075128588" y="230.58308137039816">I-70 Footbridge</string>
-   <string x-pos="25021.93392171875" mi="1036.329" index="267" x="25025.53085686574" y="228.54846173404596">Pine Knob Shelter</string>
+   <string x-pos="25021.93392171875" mi="1036.329" index="267" x="25025.53085686574" y="228.54846173404596" color="green">Pine Knob Shelter</string>
    <string x-pos="25084.690269375" mi="1038.929" index="268" x="25088.25634705793" y="229.46175768923604">Black Rock Cliffs</string>
-   <string x-pos="25220.83528890625" mi="1044.569" index="269" x="25224.322410397912" y="237.05853891015624">Ensign Cowall Shelter</string>
-   <string x-pos="25338.13021078125" mi="1049.429" index="270" x="25341.570826680243" y="225.99452362499994">Raven Rock Shelter</string>
+   <string x-pos="25220.83528890625" mi="1044.569" index="269" x="25224.322410397912" y="237.05853891015624" color="green">Ensign Cowall Shelter</string>
+   <string x-pos="25338.13021078125" mi="1049.429" index="270" x="25341.570826680243" y="225.99452362499994" color="green">Raven Rock Shelter</string>
    <string x-pos="25456.80208578125" color="red" mi="1054.346" index="271" x="25460.19437870909" y="233.27259768312754">MD / PA State Line</string>
    <string x-pos="47243.562339687494" mi="1956.986" index="272" x="47236.554558355085" y="215.47988476108205">PA 16-Blueridge</string>
-   <string x-pos="25569.846519375" mi="1059.029" index="273" x="25573.17263662064" y="249.34136270898432">Deer Lick Shelter</string>
-   <string x-pos="25627.776206875" mi="1061.429" index="274" x="25631.07308910574" y="235.18152714868796">Antietam Shelter</string>
+   <string x-pos="25569.846519375" mi="1059.029" index="273" x="25573.17263662064" y="249.34136270898432" color="green">Deer Lick Shelter</string>
+   <string x-pos="25627.776206875" mi="1061.429" index="274" x="25631.07308910574" y="235.18152714868796" color="green">Antietam Shelter</string>
    <string x-pos="25657.717613125" mi="1062.670" index="275" x="25661.012448078243" y="221.1422249555393">Tumbling Run Shelters</string>
    <string x-pos="25689.09456625" mi="1063.970" index="276" x="25692.37519317434" y="219.0221768388671">Chimney Rocks</string>
    <string x-pos="25817.02181234375" mi="1069.270" index="277" x="25820.238692412266" y="238.87024637037035">Rocky Mtn. Shelters</string>
    <string x-pos="25888.45735921875" mi="1072.229" index="278" x="25891.625125288687" y="240.55009038142916">Caledonia State Park</string>
-   <string x-pos="25952.190269375" mi="1074.870" index="279" x="25955.33974821083" y="221.7541938134111">Quarry Gap Shelter</string>
-   <string x-pos="26129.82942953125" mi="1082.230" index="280" x="26132.901135831806" y="221.2628950085304">Birch Run Shelter</string>
-   <string x-pos="26279.47786703125" mi="1088.430" index="281" x="26282.477304751646" y="246.59709109842225">Toms Run Shelter</string>
-   <string x-pos="26543.55013265625" mi="1099.370" index="282" x="26546.406867329555" y="257.67173000000076">James Fry Shelter</string>
+   <string x-pos="25952.190269375" mi="1074.870" index="279" x="25955.33974821083" y="221.7541938134111" color="green">Quarry Gap Shelter</string>
+   <string x-pos="26129.82942953125" mi="1082.230" index="280" x="26132.901135831806" y="221.2628950085304" color="green">Birch Run Shelter</string>
+   <string x-pos="26279.47786703125" mi="1088.430" index="281" x="26282.477304751646" y="246.59709109842225" color="green">Toms Run Shelter</string>
+   <string x-pos="26543.55013265625" mi="1099.370" index="282" x="26546.406867329555" y="257.67173000000076" color="green">James Fry Shelter</string>
    <string x-pos="26576.3650740625" mi="1100.730" index="283" x="26579.21712373778" y="249.65502070554012">Hunters Run Road</string>
-   <string x-pos="26743.889488125" mi="1107.671" index="284" x="26746.670057362397" y="257.70319317822344">Alec Kennedy Shelter</string>
+   <string x-pos="26743.889488125" mi="1107.671" index="284" x="26746.670057362397" y="257.70319317822344" color="green">Alec Kennedy Shelter</string>
    <string x-pos="26838.02278890625" mi="1111.571" index="285" x="26840.75829265068" y="265.3995035202556">Boiling Springs</string>
    <string x-pos="27051.77767171875" mi="1120.427" index="286" x="27054.4109623207" y="271.8371647274313">Interstate 81</string>
-   <string x-pos="27183.18392171875" mi="1125.871" index="287" x="27185.748488707737" y="263.75173000000063">Darlington Shelter</string>
-   <string x-pos="27358.40853109375" mi="1133.131" index="288" x="27360.897357475165" y="250.99636485446837">Cove Mtn. Shelter</string>
+   <string x-pos="27183.18392171875" mi="1125.871" index="287" x="27185.748488707737" y="263.75173000000063" color="green">Darlington Shelter</string>
+   <string x-pos="27358.40853109375" mi="1133.131" index="288" x="27360.897357475165" y="250.99636485446837" color="green">Cove Mtn. Shelter</string>
    <string x-pos="27457.2146834375" mi="1137.224" index="289" x="27459.64175415079" y="268.58214600000065">Duncannon</string>
    <string x-pos="27487.3123396875" mi="1138.471" index="290" x="27489.72586425451" y="251.0277058750006">Bridge over Susquhanna</string>
-   <string x-pos="27566.96566" mi="1141.771" index="291" x="27569.33898642152" y="244.48662496296356">Clarks Ferry Shelter</string>
-   <string x-pos="27730.119956875" mi="1148.531" index="292" x="27732.42526092122" y="243.28253545117252">Peters Mtn. Shelter</string>
+   <string x-pos="27566.96566" mi="1141.771" index="291" x="27569.33898642152" y="244.48662496296356" color="green">Clarks Ferry Shelter</string>
+   <string x-pos="27730.119956875" mi="1148.531" index="292" x="27732.42526092122" y="243.28253545117252" color="green">Peters Mtn. Shelter</string>
    <string x-pos="27810.7498396875" mi="1151.871" index="293" x="27813.003390629652" y="241.11686904506212">Shikellimy Overlook</string>
-   <string x-pos="28153.49642171875" mi="1166.072" index="294" x="28155.60519302169" y="250.1899007476858">Rausch Gap Shelter</string>
+   <string x-pos="28153.49642171875" mi="1166.072" index="294" x="28155.60519302169" y="250.1899007476858" color="green">Rausch Gap Shelter</string>
    <string x-pos="28306.9119490625" mi="1172.428" index="295" x="28308.944891353065" y="245.0414487500006">Interstate 81</string>
-   <string x-pos="28473.54524984375" mi="1179.331" index="296" x="28475.48106781333" y="242.0311743895753">William Penn Shelter</string>
-   <string x-pos="28572.5076521875" mi="1183.432" index="297" x="28574.418465997245" y="239.207042731482">501 Shelter</string>
-   <string x-pos="28937.95442953125" mi="1198.572" index="298">Eagles Nest Shelter</string>
+   <string x-pos="28473.54524984375" mi="1179.331" index="296" x="28475.48106781333" y="242.0311743895753" color="green">William Penn Shelter</string>
+   <string x-pos="28572.5076521875" mi="1183.432" index="297" x="28574.418465997245" y="239.207042731482" color="green">501 Shelter</string>
+   <string x-pos="28937.95442953125" mi="1198.572" index="298" color="green">Eagles Nest Shelter</string>
    <string x-pos="29144.55599203125" mi="1207.132" index="299" x="29146.185434287607" y="259.9610683005254">Port Clinton</string>
-   <string x-pos="29291.79232015625" mi="1213.232" index="300" x="29293.3490843539" y="242.97030459259207">Winsor Furnace Shelter</string>
-   <string x-pos="29511.4431990625" mi="1222.332" index="301" x="29512.888300026574" y="256.7764682159589">Eckville Shelter</string>
+   <string x-pos="29291.79232015625" mi="1213.232" index="300" x="29293.3490843539" y="242.97030459259207" color="green">Winsor Furnace Shelter</string>
+   <string x-pos="29511.4431990625" mi="1222.332" index="301" x="29512.888300026574" y="256.7764682159589" color="green">Eckville Shelter</string>
    <string x-pos="29857.57845296875" mi="1236.673" index="302" x="29858.867628813576" y="236.3278562030736">Knife Edge</string>
-   <string x-pos="29931.428550625" mi="1239.733" index="303" x="29932.69070573208" y="236.25180582798782">Bake Oven Knob Shelter</string>
-   <string x-pos="30096.5359725" mi="1246.573" index="304" x="30097.706995314617" y="269.51425199999943">Outerbridge Shelter</string>
+   <string x-pos="29931.428550625" mi="1239.733" index="303" x="29932.69070573208" y="236.25180582798782" color="green">Bake Oven Knob Shelter</string>
+   <string x-pos="30096.5359725" mi="1246.573" index="304" x="30097.706995314617" y="269.51425199999943" color="green">Outerbridge Shelter</string>
    <string x-pos="30117.8787459375" mi="1247.457" index="305" x="30119.03366197996" y="239.24822829472765">PA 248 (Palmerton)</string>
-   <string x-pos="30502.04134359375" mi="1263.373" index="306" x="30503.01016271031" y="239.37785911599934">Leroy Smith Shelter</string>
+   <string x-pos="30502.04134359375" mi="1263.373" index="306" x="30503.01016271031" y="239.37785911599934" color="green">Leroy Smith Shelter</string>
    <string x-pos="30613.07161703125" mi="1267.973" index="307" x="30613.986029973417" y="234.21350268518458">Wind Gap</string>
-   <string x-pos="30835.13216390625" mi="1277.174" index="308" x="30835.96188968817" y="238.4857835019525">Kirk ridge Shelter</string>
+   <string x-pos="30835.13216390625" mi="1277.174" index="308" x="30835.96188968817" y="238.4857835019525" color="green">Kirk ridge Shelter</string>
    <string x-pos="30994.39974203125" mi="1283.772" color="red" index="309" x="30995.13988364512" y="273.868699481481">PA / NJ State Line (Delaware River)</string>
    <string x-pos="31240.637535" mi="1293.974" index="310" x="31241.265057083867" y="238.76954799999953">Camp Rd</string>
    <string x-pos="31297.59066" mi="1296.334" index="311" x="31298.20050202755" y="243.62827636637437">Catfish Fire Tower</string>
-   <string x-pos="31584.8221053125" mi="1308.234" index="312" x="31585.2902455995" y="240.90362199999998">Brink Rd. Shelter</string>
+   <string x-pos="31584.8221053125" mi="1308.234" index="312" x="31585.2902455995" y="240.90362199999998" color="green">Brink Rd. Shelter</string>
    <string x-pos="31672.6931990625" mi="1311.874" index="313" x="31673.10593186857" y="243.28884026967927">Culvers Gap</string>
-   <string x-pos="31744.12630453125" mi="1314.834" index="314" x="31744.516489933525" y="238.57363200685867">Gren Anderson Shelter</string>
-   <string x-pos="31885.100425625" mi="1320.675" index="315" x="31885.431716169136" y="240.02241882419233">Mashipacong Shelter</string>
-   <string x-pos="31954.12142171875" mi="1323.534" index="316" x="31954.405630192014" y="236.24092892799993">Rutherford Shelter</string>
-   <string x-pos="32058.88704671875" mi="1327.875" index="317" x="32059.133073624434" y="247.18415800000005">High Point Shelter</string>
+   <string x-pos="31744.12630453125" mi="1314.834" index="314" x="31744.516489933525" y="238.57363200685867" color="green">Gren Anderson Shelter</string>
+   <string x-pos="31885.100425625" mi="1320.675" index="315" x="31885.431716169136" y="240.02241882419233" color="green">Mashipacong Shelter</string>
+   <string x-pos="31954.12142171875" mi="1323.534" index="316" x="31954.405630192014" y="236.24092892799993" color="green">Rutherford Shelter</string>
+   <string x-pos="32058.88704671875" mi="1327.875" index="317" x="32059.133073624434" y="247.18415800000005" color="green">High Point Shelter</string>
    <string x-pos="32229.2849959375" mi="1334.934" index="318" x="32229.432779496234" y="267.79779174927114">Lott Road</string>
-   <string x-pos="32357.209800625" mi="1340.234" index="319" x="32357.29627873416" y="248.5637601803157">Pochuck Mtn. Shelter</string>
+   <string x-pos="32357.209800625" mi="1340.234" index="319" x="32357.29627873416" y="248.5637601803157" color="green">Pochuck Mtn. Shelter</string>
    <string x-pos="32458.58675375" mi="1344.434" index="320" x="32458.622070583086" y="270.8146876666667">Road 517</string>
    <string x-pos="32514.95149984375" mi="1346.770" index="321" x="32514.97851100192" y="250.40586055144047">NJ 94-Vernon</string>
-   <string x-pos="32638.17903890625" mi="1351.875" index="322" x="32638.137598475434" y="245.52826043072713">Wawayanda Shelter</string>
+   <string x-pos="32638.17903890625" mi="1351.875" index="322" x="32638.137598475434" y="245.52826043072713" color="green">Wawayanda Shelter</string>
    <string x-pos="32734.68782796875" color="red" mi="1355.874" index="323" x="32734.61422742873" y="242.9860202720002">NJ / NY State Line</string>
-   <string x-pos="32929.260581875" mi="1363.935" index="324" x="32929.087372213064" y="246.44985027983557">Wildcat Shelter</string>
+   <string x-pos="32929.260581875" mi="1363.935" index="324" x="32929.087372213064" y="246.44985027983557" color="green">Wildcat Shelter</string>
    <string x-pos="33090.979331875" mi="1370.635" index="325" x="33090.72613540063" y="259.8683221473643">East Mombasha Rd</string>
-   <string x-pos="33275.3982771875" mi="1378.276" index="326" x="33275.06670100007" y="243.71283911194607">Fingerboard Shelter</string>
-   <string x-pos="33402.34896078125" mi="1383.535" index="327" x="33401.94106750804" y="253.43442872886325">WIlliam Brian Shelter</string>
-   <string x-pos="33477.1756209375" mi="1386.635" index="328" x="33476.729151967964" y="249.7746931093753">West Mtn. Shelter</string>
+   <string x-pos="33275.3982771875" mi="1378.276" index="326" x="33275.06670100007" y="243.71283911194607" color="green">Fingerboard Shelter</string>
+   <string x-pos="33402.34896078125" mi="1383.535" index="327" x="33401.94106750804" y="253.43442872886325" color="green">WIlliam Brian Shelter</string>
+   <string x-pos="33477.1756209375" mi="1386.635" index="328" x="33476.729151967964" y="249.7746931093753" color="green">West Mtn. Shelter</string>
    <string x-pos="33554.41439046875" mi="1389.835" index="329" x="33553.92975528143" y="254.51498094794076">Bear Mountain</string>
    <string x-pos="34005.77669515625" mi="1408.536" index="330" x="34005.09490608303" y="257.2340060000004">Sunk Mine Road</string>
-   <string x-pos="34225.42513265625" mi="1417.636" index="331" x="34224.634121755706" y="258.09347340740595">RPH Shelter</string>
-   <string x-pos="34443.63802328125" mi="1426.677" index="332" x="34442.74995130478" y="245.258053818358">Morgan Stewart Shelter</string>
-   <string x-pos="34631.90462484375" mi="1434.477" index="333" x="34630.926421881355" y="259.72183465214">Telephone Pioneers Shelter</string>
+   <string x-pos="34225.42513265625" mi="1417.636" index="331" x="34224.634121755706" y="258.09347340740595" color="green">RPH Shelter</string>
+   <string x-pos="34443.63802328125" mi="1426.677" index="332" x="34442.74995130478" y="245.258053818358" color="green">Morgan Stewart Shelter</string>
+   <string x-pos="34631.90462484375" mi="1434.477" index="333" x="34630.926421881355" y="259.72183465214" color="green">Telephone Pioneers Shelter</string>
    <string x-pos="34705.7547225" mi="1437.536" index="334" x="34704.72537361132" y="252.63245025925798">AT Train Station</string>
    <string x-pos="34869.88802328125" color="red" mi="1444.336" index="335" x="34868.77665565244" y="266.2846550845468">NY / CT State Line</string>
-   <string x-pos="34937.47103109375" mi="1447.136" index="336" x="34936.32718355172" y="270.29650178124865">Ten Mile River Lean-to</string>
-   <string x-pos="35141.1990584375" mi="1455.577" index="337" x="35139.96789997952" y="257.5697185039986">Mt. Algo Lean-to</string>
-   <string x-pos="35316.4236678125" mi="1462.837" index="338" x="35315.11676874695" y="269.6895318619445">Stewart Hollow Lean-to</string>
+   <string x-pos="34937.47103109375" mi="1447.136" index="336" x="34936.32718355172" y="270.29650178124865" color="green">Ten Mile River Lean-to</string>
+   <string x-pos="35141.1990584375" mi="1455.577" index="337" x="35139.96789997952" y="257.5697185039986" color="green">Mt. Algo Lean-to</string>
+   <string x-pos="35316.4236678125" mi="1462.837" index="338" x="35315.11676874695" y="269.6895318619445" color="green">Stewart Hollow Lean-to</string>
    <string x-pos="35531.24544515625" mi="1471.737" index="339" x="35529.83094671253" y="245.5257906249986">West Cornwall Road</string>
-   <string x-pos="35558.772300625" mi="1472.877" index="340" x="35557.33366164295" y="247.13273561807443">Pine Swamp Brook Lean-to</string>
+   <string x-pos="35558.772300625" mi="1472.877" index="340" x="35557.33366164295" y="247.13273561807443" color="green">Pine Swamp Brook Lean-to</string>
    <string x-pos="35754.28255453125" mi="1480.977" index="341" x="35752.74768878016" y="266.5390639023423">Hydroelectric Plant</string>
-   <string x-pos="35855.65950765625" mi="1485.178" index="342" x="35854.097605817624" y="249.6784409999986">Limestone Spring Lean-to</string>
-   <string x-pos="36036.6873396875" mi="1492.678" index="343" x="36035.03651983356" y="227.60361024590964">Riga Lean-to</string>
-   <string x-pos="36064.6756209375" mi="1493.837" index="344" x="36062.99761334615" y="220.2215191249985">Brassie Brook Lean-to</string>
+   <string x-pos="35855.65950765625" mi="1485.178" index="342" x="35854.097605817624" y="249.6784409999986" color="green">Limestone Spring Lean-to</string>
+   <string x-pos="36036.6873396875" mi="1492.678" index="343" x="36035.03651983356" y="227.60361024590964" color="green">Riga Lean-to</string>
+   <string x-pos="36064.6756209375" mi="1493.837" index="344" x="36062.99761334615" y="220.2215191249985" color="green">Brassie Brook Lean-to</string>
    <string x-pos="36115.3640975" color="red" mi="1495.937" index="345" x="36113.660509270616" y="237.45468116203557">CT / MA State Line</string>
-   <string x-pos="36277.0828475" mi="1502.637" index="346" x="36275.299272458185" y="226.85088497109555">The Hemlock Lean-to</string>
+   <string x-pos="36277.0828475" mi="1502.637" index="346" x="36275.299272458185" y="226.85088497109555" color="green">The Hemlock Lean-to</string>
    <string x-pos="36383.13021078125" mi="1507.031" index="347" x="36381.30535088299" y="261.41299929629474">Mass 41</string>
-   <string x-pos="36624.6560896875" mi="1517.038" index="348" x="36622.72611255732" y="244.2075887847665">Tom Leonard Lean-to</string>
+   <string x-pos="36624.6560896875" mi="1517.038" index="348" x="36622.72611255732" y="244.2075887847665" color="green">Tom Leonard Lean-to</string>
    <string x-pos="36672.84456625" mi="1519.034" index="349" x="36670.8799888741" y="235.84769672098165">Mass 23</string>
-   <string x-pos="36752.5857771875" mi="1522.338" index="350" x="36750.58961179524" y="222.7272609707016">Mt. Wilcox South Lean-to</string>
+   <string x-pos="36752.5857771875" mi="1522.338" index="350" x="36750.58961179524" y="222.7272609707016" color="green">Mt. Wilcox South Lean-to</string>
    <string x-pos="36939.377769375" mi="1530.077" index="351" x="36937.29444587116" y="243.5981795251372">Jerusalem Rd.</string>
    <string x-pos="37134.9295271875" mi="1538.179" index="352" x="37132.75672338544" y="227.97730691545175">Upper Goose Pond Cabin</string>
-   <string x-pos="37346.35774984375" mi="1546.938" index="353" x="37344.06924976752" y="222.04458799999975">October Mtn. Lean-to</string>
-   <string x-pos="37559.74153890625" mi="1555.779" index="354" x="37557.36004160951" y="236.30653216909602">Kay Wood Lean-to</string>
+   <string x-pos="37346.35774984375" mi="1546.938" index="353" x="37344.06924976752" y="222.04458799999975" color="green">October Mtn. Lean-to</string>
+   <string x-pos="37559.74153890625" mi="1555.779" index="354" x="37557.36004160951" y="236.30653216909602" color="green">Kay Wood Lean-to</string>
    <string x-pos="37841.1697615625" mi="1567.439" index="355" x="37838.65973993295" y="252.77440662277078">Hoosic River</string>
-   <string x-pos="37962.21712484375" mi="1572.454" index="356" x="37959.64756043827" y="181.7849059999998">Mark Noepel Lean-to</string>
+   <string x-pos="37962.21712484375" mi="1572.454" index="356" x="37959.64756043827" y="181.7849059999998" color="green">Mark Noepel Lean-to</string>
    <string x-pos="38042.48567953125" mi="1575.779" index="357" x="38039.86381231867" y="186.53933265889185">Mt. Greylock</string>
-   <string x-pos="38121.5213240625" mi="1579.054" index="358" x="38118.873804772295" y="207.53850899999972">Wilbur Clearing Lean-to</string>
+   <string x-pos="38121.5213240625" mi="1579.054" index="358" x="38118.873804772295" y="207.53850899999972" color="green">Wilbur Clearing Lean-to</string>
    <string x-pos="38193.5721053125" mi="1582.039" index="359" x="38190.88749255064" y="259.2870802222219">Mass 2-Williamstown</string>
    <string x-pos="38292.53450765625" color="red" mi="1586.139" index="360" x="38289.80076554602" y="213.44322726171845">MA / VT State Line</string>
-   <string x-pos="38360.11751546875" mi="1588.939" index="361" x="38357.3512934453" y="207.68108099999978">Seth Warner Shelter</string>
-   <string x-pos="38534.88314046875" mi="1596.180" index="362" x="38532.04178363056" y="213.15861975102388">Congdon Shelter</string>
+   <string x-pos="38360.11751546875" mi="1588.939" index="361" x="38357.3512934453" y="207.68108099999978" color="green">Seth Warner Shelter</string>
+   <string x-pos="38534.88314046875" mi="1596.180" index="362" x="38532.04178363056" y="213.15861975102388" color="green">Congdon Shelter</string>
    <string x-pos="38638.67220296875" mi="1600.480" index="363" x="38635.78009433302" y="223.47502392899383">Bennington VT</string>
-   <string x-pos="38676.31380453125" mi="1602.039" index="364" x="38673.3912632598" y="198.86488886476306">Melville Nauheim Shelter</string>
-   <string x-pos="38881.47982015625" mi="1610.539" index="365" x="38878.4553658112" y="165.06502383789035">Goddard Shelter</string>
-   <string x-pos="38985.2713240625" mi="1614.840" index="366" x="38982.2178017022" y="190.27463537174185">Kid Gore Shelter</string>
+   <string x-pos="38676.31380453125" mi="1602.039" index="364" x="38673.3912632598" y="198.86488886476306" color="green">Melville Nauheim Shelter</string>
+   <string x-pos="38881.47982015625" mi="1610.539" index="365" x="38878.4553658112" y="165.06502383789035" color="green">Goddard Shelter</string>
+   <string x-pos="38985.2713240625" mi="1614.840" index="366" x="38982.2178017022" y="190.27463537174185" color="green">Kid Gore Shelter</string>
    <string x-pos="39097.27816" mi="1619.480" index="367" x="39094.158676506726" y="189.49168250462935">Story Spring Sheler</string>
    <string x-pos="39274.82942953125" mi="1626.836" index="368" x="39271.623563373556" y="167.15298314866834">Stratton Mtn.</string>
-   <string x-pos="39466.575035" mi="1634.780" index="369" x="39463.27406109924" y="212.09818792968764">William Douglas Shelter</string>
-   <string x-pos="39538.987144375" mi="1637.780" index="370" x="39535.64962670561" y="217.20074232617205">Spruce Peak Shelter</string>
+   <string x-pos="39466.575035" mi="1634.780" index="369" x="39463.27406109924" y="212.09818792968764" color="green">William Douglas Shelter</string>
+   <string x-pos="39538.987144375" mi="1637.780" index="370" x="39535.64962670561" y="217.20074232617205" color="green">Spruce Peak Shelter</string>
    <string x-pos="39605.5935896875" mi="1640.540" index="371" x="39602.235147063475" y="224.4855292500001">Vt.11-Manchester Center</string>
-   <string x-pos="39654.846519375" mi="1642.580" index="372" x="39651.45053167581" y="195.8965027895001">Bromley Shelter</string>
-   <string x-pos="39849.38021078125" mi="1650.640" index="373" x="39845.89955127161" y="200.76173228099182">Peru Peak Shelter</string>
-   <string x-pos="39962.825035" mi="1655.340" index="374" x="39959.28793738826" y="218.91976187593923">Lost Pond Shelter</string>
-   <string x-pos="40004.83431234375" mi="1657.081" index="375" x="40001.28989062849" y="235.7951738134112">Big Branch Shelter</string>
-   <string x-pos="40077.24642171875" mi="1660.081" index="376" x="40073.66545623486" y="224.0403136953126">Lula Tye Shelter</string>
-   <string x-pos="40093.16439046875" mi="1660.740" index="377" x="40089.56395547973" y="225.6393273946761">Little Rock Pond Shelter</string>
-   <string x-pos="40199.36800375" mi="1665.140" index="378" x="40195.71478503575" y="225.56121014814823">Greenwall Shelter</string>
-   <string x-pos="40323.4451521875" mi="1670.281" index="379" x="40319.74237929654" y="228.05757892729775">Minerva Hinchey Shelter</string>
+   <string x-pos="39654.846519375" mi="1642.580" index="372" x="39651.45053167581" y="195.8965027895001" color="green">Bromley Shelter</string>
+   <string x-pos="39849.38021078125" mi="1650.640" index="373" x="39845.89955127161" y="200.76173228099182" color="green">Peru Peak Shelter</string>
+   <string x-pos="39962.825035" mi="1655.340" index="374" x="39959.28793738826" y="218.91976187593923" color="green">Lost Pond Shelter</string>
+   <string x-pos="40004.83431234375" mi="1657.081" index="375" x="40001.28989062849" y="235.7951738134112" color="green">Big Branch Shelter</string>
+   <string x-pos="40077.24642171875" mi="1660.081" index="376" x="40073.66545623486" y="224.0403136953126" color="green">Lula Tye Shelter</string>
+   <string x-pos="40093.16439046875" mi="1660.740" index="377" x="40089.56395547973" y="225.6393273946761" color="green">Little Rock Pond Shelter</string>
+   <string x-pos="40199.36800375" mi="1665.140" index="378" x="40195.71478503575" y="225.56121014814823" color="green">Greenwall Shelter</string>
+   <string x-pos="40323.4451521875" mi="1670.281" index="379" x="40319.74237929654" y="228.05757892729775" color="green">Minerva Hinchey Shelter</string>
    <string x-pos="40386.20149984375" mi="1672.881" index="380" x="40382.46786948873" y="252.05543671167">Clarendon Gorge Bridge</string>
-   <string x-pos="40411.7752303125" mi="1673.941" index="381" x="40408.04056933632" y="237.7295711450039">Clarendon Shelter</string>
-   <string x-pos="40551.7703475" mi="1679.741" index="382" x="40547.96666284197" y="222.18835170924126">Governor Clement Shelter</string>
+   <string x-pos="40411.7752303125" mi="1673.941" index="381" x="40408.04056933632" y="237.7295711450039" color="green">Clarendon Shelter</string>
+   <string x-pos="40551.7703475" mi="1679.741" index="382" x="40547.96666284197" y="222.18835170924126" color="green">Governor Clement Shelter</string>
    <string x-pos="40656.5359725" mi="1684.081" index="383" x="40652.66998108586" y="164.24680321111958">Mt Killington</string>
-   <string x-pos="40761.7654646875" mi="1688.441" index="384" x="40757.855803100465" y="205.2380195097657">Churchill Scott Shelter</string>
+   <string x-pos="40761.7654646875" mi="1688.441" index="384" x="40757.855803100465" y="205.2380195097657" color="green">Churchill Scott Shelter</string>
    <string x-pos="40807.6248396875" mi="1690.341" index="385" x="40803.69366131783" y="223.33997395312505">US 4-Rutland</string>
    <string x-pos="40832.737144375" mi="1691.381" index="386" x="40828.78385739471" y="211.25480313899325">Willard Gap</string>
    <string x-pos="40933.137535" mi="1695.541" index="387" x="40929.144641702216" y="240.99484255500002">River Rd.</string>
    <string x-pos="40946.18441" mi="1696.082" index="388" x="40942.1963686999" y="239.45191428125003">Quimby Mountain</string>
-   <string x-pos="41049.973472499994" mi="1700.382" index="389" x="41045.93467940237" y="232.93655">Stony Brook Shelter</string>
-   <string x-pos="41287.951988124994" mi="1710.241" index="390" x="41283.78491317345" y="236.90744298902612">Wintturi Shelter</string>
+   <string x-pos="41049.973472499994" mi="1700.382" index="389" x="41045.93467940237" y="232.93655" color="green">Stony Brook Shelter</string>
+   <string x-pos="41287.951988124994" mi="1710.241" index="390" x="41283.78491317345" y="236.90744298902612" color="green">Wintturi Shelter</string>
    <string x-pos="41379.675620937494" mi="1714.041" index="391" x="41375.46062960819" y="243.61009150000004">VT 12-Woodstock</string>
    <string x-pos="41560.701011562494" mi="1721.541" index="392" x="41556.399543624124" y="230.80603841200013">Thistle Hill</string>
    <string x-pos="41683.801597499994" mi="1726.641" index="393" x="41679.43800515497" y="271.59752047685197">White River</string>
-   <string x-pos="41781.326011562494" mi="1730.682" index="394" x="41776.92789202675" y="238.30548048800026">Happy Hill Shelter</string>
+   <string x-pos="41781.326011562494" mi="1730.682" index="394" x="41776.92789202675" y="238.30548048800026" color="green">Happy Hill Shelter</string>
    <string x-pos="41908.679527187494" color="red" mi="1735.958" index="395" x="41904.21238673983" y="269.5540601250002">VT / NH State Line</string>
    <string x-pos="41920.193199062494" mi="1736.435" index="396" x="41915.72010167124" y="270.44429999588505">Hanover NH</string>
-   <string x-pos="41956.550620937494" mi="1737.942" index="397" x="41952.07676079418" y="267.34775242263277">Velvet Rocks Shelter</string>
-   <string x-pos="42185.857261562494" mi="1747.442" index="398" x="42181.26605188103" y="219.14481266472356">Moose Mtn. Shelter</string>
+   <string x-pos="41956.550620937494" mi="1737.942" index="397" x="41952.07676079418" y="267.34775242263277" color="green">Velvet Rocks Shelter</string>
+   <string x-pos="42185.857261562494" mi="1747.442" index="398" x="42181.26605188103" y="219.14481266472356" color="green">Moose Mtn. Shelter</string>
    <string x-pos="42312.346519374994" mi="1752.683" index="399" x="42307.70616499537" y="220.1344840594347">Holts Ledge</string>
-   <string x-pos="42324.411949062494" mi="1753.182" index="400" x="42319.74463407456" y="232.9124432569451">Trapper John Shelter</string>
+   <string x-pos="42324.411949062494" mi="1753.182" index="400" x="42319.74463407456" y="232.9124432569451" color="green">Trapper John Shelter</string>
    <string x-pos="42393.435386562494" mi="1756.042" index="401" x="42388.74267328597" y="246.232062428572">Dorchester Rd.</string>
    <string x-pos="42485.066245937494" mi="1759.838" index="402" x="42480.32188896657" y="181.666356444445">Smarts Mtn.</string>
-   <string x-pos="42613.083824062494" mi="1765.142" index="403" x="42608.28188895864" y="221.4510477914958">Hexacuba Shelter</string>
+   <string x-pos="42613.083824062494" mi="1765.142" index="403" x="42608.28188895864" y="221.4510477914958" color="green">Hexacuba Shelter</string>
    <string x-pos="42651.701988124994" mi="1766.742" index="404" x="42646.882190615375" y="196.93091704800057">Cube Mtn.</string>
-   <string x-pos="42784.455894374994" mi="1772.242" index="405" x="42779.57072756039" y="237.0960620873849">Ore Hill Shelter</string>
+   <string x-pos="42784.455894374994" mi="1772.242" index="405" x="42779.57072756039" y="237.0960620873849" color="green">Ore Hill Shelter</string>
    <string x-pos="42907.556480312494" mi="1777.343" index="406" x="42902.63331427977" y="214.48025684375062">Mist Mountain</string>
    <string x-pos="42965.486167812494" mi="1779.743" index="407" x="42960.533766764864" y="243.51388792592655">NH 25-Glencliff</string>
-   <string x-pos="42992.971519374994" mi="1780.881" index="408" x="42987.98823131822" y="243.37223179851915">Jeffers Brook Shelter</string>
+   <string x-pos="42992.971519374994" mi="1780.881" index="408" x="42987.98823131822" y="243.37223179851915" color="green">Jeffers Brook Shelter</string>
    <string x-pos="43103.069175624994" mi="1785.443" index="409" x="43098.047341416976" y="133.75013693055615">Mt. Moosilauke</string>
-   <string x-pos="43158.093589687494" mi="1787.722" index="410" x="43153.02864608929" y="160.28829035006737">Beaver Brook Shelter</string>
+   <string x-pos="43158.093589687494" mi="1787.722" index="410" x="43153.02864608929" y="160.28829035006737" color="green">Beaver Brook Shelter</string>
    <string x-pos="43194.787925624994" mi="1789.243" index="411" x="43189.72305785172" y="223.97359452842628">Kinsman Notch</string>
    <string x-pos="43436.159995937494" mi="1799.243" index="412" x="43430.9749432063" y="151.56655118518574">Kinsman Mtn.</string>
    <string x-pos="43588.225425624994" mi="1805.543" index="413" x="43582.963630979684" y="237.2455182274058">I-93 Franconia Notch</string>
@@ -377,90 +377,90 @@
    <string x-pos="43718.562339687494" mi="1810.943" index="415" x="43713.23964907116" y="130.34041163281293">Mt. Lincoln</string>
    <string x-pos="43743.064292812494" mi="1811.958" index="416" x="43737.726715434655" y="121.55023694460687">Mt. Lafayette</string>
    <string x-pos="43827.180503749994" mi="1815.443" index="417" x="43821.80299748072" y="147.21663480390728">Mt. Garfield</string>
-   <string x-pos="43902.004722499994" mi="1818.543" index="418" x="43896.59108194064" y="166.9994889766808">Galehead Hut</string>
+   <string x-pos="43902.004722499994" mi="1818.543" index="418" x="43896.59108194064" y="166.9994889766808" color="green">Galehead Hut</string>
    <string x-pos="43915.505699062494" mi="1819.3435" index="419" x="43915.9032953633" y="138.423638232255">South Twin\nMountain</string>
-   <string x-pos="44070.964683437494" mi="1825.543" index="421" x="44065.46740168885" y="204.85198232907624">Zealand Hut</string>
+   <string x-pos="44070.964683437494" mi="1825.543" index="421" x="44065.46740168885" y="204.85198232907624" color="green">Zealand Hut</string>
    <string x-pos="44256.824058437494" mi="1833.244" index="422" x="44251.25547860041" y="240.15127036400037">Crawford Notch</string>
    <string x-pos="44336.472495937494" mi="1836.543" index="423" x="44330.84447557889" y="166.0234550795613">Mt. Webster</string>
    <string x-pos="44371.203941249994" mi="1837.982" index="424" x="44365.560621881414" y="157.816568618656">Mt. Jackson</string>
-   <string x-pos="44412.278159999994" mi="1839.684" index="425" x="44406.621692768764" y="159.11207243200627">Mizpah Hut</string>
+   <string x-pos="44412.278159999994" mi="1839.684" index="425" x="44406.621692768764" y="159.11207243200627" color="green">Mizpah Hut</string>
    <string x-pos="44430.608238124994" mi="1840.444" index="426" x="44424.95683605572" y="147.67998182215766">Mt. Pierce</string>
    <string x-pos="44498.191245937494" mi="1843.244" index="427" x="44492.507363954996" y="128.37423152478158">Mt. Franklin</string>
-   <string x-pos="44519.182456874994" mi="1844.3235" index="428" x="44518.550504979" y="121.995956">Lake of the\nClouds Hut</string>
+   <string x-pos="44519.182456874994" mi="1844.3235" index="428" x="44518.550504979" y="121.995956" color="green">Lake of the\nClouds Hut</string>
    <string x-pos="44562.937339687494" mi="1845.926" index="430" x="44557.2111196071" y="92.45632918518535">Washington</string>
-   <string x-pos="44696.116050624994" mi="1851.444" index="431" x="44690.33390994575" y="124.39478669775409">Madison Hut</string>
+   <string x-pos="44696.116050624994" mi="1851.444" index="431" x="44690.33390994575" y="124.39478669775409" color="green">Madison Hut</string>
    <string x-pos="44884.387534999994" mi="1859.244" index="432" x="44878.510380522326" y="217.55269093688963">Pinkham Notch</string>
    <string x-pos="45005.071128749994" mi="1864.244" index="433" x="44999.136323199615" y="148.422843">Wildcat Peak A</string>
    <string x-pos="45026.794761562494" mi="1865.144" index="434" x="45020.84899288153" y="172.52016873350607">Carter Notch</string>
    <string x-pos="45055.671714687494" mi="1866.340" index="435" x="45049.70271836994" y="139.41748782465277">Carter Dome</string>
    <string x-pos="45140.154136562494" mi="1869.841" index="436" x="45134.16500343258" y="142.51242242857143">Carter Mtn.</string>
    <string x-pos="45251.272300624994" mi="1874.444" index="437" x="45245.21324626129" y="157.348854">Mt. Moriah</string>
-   <string x-pos="45347.820152187494" mi="1878.444" index="438" x="45341.714000403124" y="238.3319954121094">Rattle River Shelter</string>
+   <string x-pos="45347.820152187494" mi="1878.444" index="438" x="45341.714000403124" y="238.3319954121094" color="green">Rattle River Shelter</string>
    <string x-pos="45393.684409999994" mi="1880.345" index="439" x="45387.57598380903" y="256.4073860864634">US 2-Gorham</string>
    <string x-pos="45481.394370937494" mi="1883.978" index="440" x="45475.22279375835" y="208.26626939780525">Mt. Hayes</string>
    <string x-pos="45533.674644374994" mi="1886.144" index="441" x="45527.47795212615" y="204.4624414439878">Cascade Mtn.</string>
    <string x-pos="45745.993980312494" mi="1894.941" index="442" x="45739.707235672584" y="175.20985535818932">Mt. Success</string>
    <string x-pos="45791.946128749994" mi="1896.845" color="red" index="443" x="45785.64159464409" y="190.47942699999993">NH / ME State Line</string>
-   <string x-pos="45801.599449062494" mi="1897.245" index="444" x="45795.29167005827" y="188.292870704">Col Shelter</string>
-   <string x-pos="45907.805503749994" mi="1901.645" index="445" x="45901.44249961429" y="179.5535697407407">Full Goose Shelter</string>
+   <string x-pos="45801.599449062494" mi="1897.245" index="444" x="45795.29167005827" y="188.292870704" color="green">Col Shelter</string>
+   <string x-pos="45907.805503749994" mi="1901.645" index="445" x="45901.44249961429" y="179.5535697407407" color="green">Full Goose Shelter</string>
    <string x-pos="45944.006675624994" mi="1903.145" index="446" x="45937.63028241748" y="188.30753751668288">Mahoosuc Notch</string>
    <string x-pos="46009.177574062494" mi="1905.845" index="447" x="46002.76829146322" y="171.6684883758773">Mahoosuc Arm</string>
-   <string x-pos="46031.877769374994" mi="1906.785" index="448" x="46025.44596868655" y="173.77638176388888">Speck Pond Shelter</string>
+   <string x-pos="46031.877769374994" mi="1906.785" index="448" x="46025.44596868655" y="173.77638176388888" color="green">Speck Pond Shelter</string>
    <string x-pos="46141.931480312494" mi="1911.345" index="449" x="46135.456828408234" y="226.94044">Grafton Notch</string>
-   <string x-pos="46198.425620937494" mi="1913.685" index="450" x="46191.90976958121" y="197.60124344726563">Baldpate Lean-to</string>
+   <string x-pos="46198.425620937494" mi="1913.685" index="450" x="46191.90976958121" y="197.60124344726563" color="green">Baldpate Lean-to</string>
    <string x-pos="46217.121909999994" mi="1914.460" index="451" x="46210.60679069619" y="181.99086432653064">Baldpate Mtn. West Peak</string>
    <string x-pos="46238.845542812494" mi="1915.360" index="452" x="46232.3194603781" y="173.93453621354166">Baldpate Mtn. East Peak</string>
-   <string x-pos="46282.903159999994" mi="1917.185" index="453" x="46276.34792945531" y="203.285672578125">Frye Notch Lean-to</string>
+   <string x-pos="46282.903159999994" mi="1917.185" index="453" x="46276.34792945531" y="203.285672578125" color="green">Frye Notch Lean-to</string>
    <string x-pos="46390.544761562494" mi="1921.645" index="454" x="46383.94627032345" y="240.34985617599997">East B Road-Andover</string>
-   <string x-pos="46535.368980312494" mi="1927.645" index="455" x="46528.69740153621" y="199.7672772592593">Hall Mountain Lean-to</string>
+   <string x-pos="46535.368980312494" mi="1927.645" index="455" x="46528.69740153621" y="199.7672772592593" color="green">Hall Mountain Lean-to</string>
    <string x-pos="46591.863120937494" mi="1929.986" index="456" x="46585.17446789772" y="229.77410940740742">Moody Mountain</string>
    <string x-pos="46634.328941249994" mi="1931.745" index="457" x="46627.610674531585" y="224.2321452592593">South Arm Rd.</string>
    <string x-pos="46701.916831874994" mi="1934.545" index="458" x="46695.16120243087" y="181.41769112407246">Old Blue Mtn.</string>
-   <string x-pos="46844.324058437494" mi="1940.446" index="459" x="46837.5239399786" y="185.95269576800013">Bemis Mtn. Lean-to</string>
+   <string x-pos="46844.324058437494" mi="1940.446" index="459" x="46837.5239399786" y="185.95269576800013" color="green">Bemis Mtn. Lean-to</string>
    <string x-pos="46994.949058437494" mi="1946.686" index="460" x="46988.065116439866" y="209.4156827736627">Moxie pond</string>
-   <string x-pos="47045.637534999994" mi="1948.786" index="461" x="47038.72801236433" y="210.0559707843728">Sabboth Day Lean-to</string>
-   <string x-pos="47314.997886562494" mi="1959.946" index="462" x="47307.96511642004" y="221.5231145000002">Piazza Rock Lean-to</string>
+   <string x-pos="47045.637534999994" mi="1948.786" index="461" x="47038.72801236433" y="210.0559707843728" color="green">Sabboth Day Lean-to</string>
+   <string x-pos="47314.997886562494" mi="1959.946" index="462" x="47307.96511642004" y="221.5231145000002" color="green">Piazza Rock Lean-to</string>
    <string x-pos="47447.751792812494" mi="1965.446" index="463" x="47440.65365336506" y="169.51680892592543">The Horn</string>
    <string x-pos="47496.965659999994" mi="1967.485" index="464" x="47489.84491278886" y="185.53415652799953">Saddleback Jr</string>
-   <string x-pos="47530.793784999994" mi="1968.886" index="465" x="47523.64430192704" y="191.69792084179642">Poplar Ridge Lean-to</string>
+   <string x-pos="47530.793784999994" mi="1968.886" index="465" x="47523.64430192704" y="191.69792084179642" color="green">Poplar Ridge Lean-to</string>
    <string x-pos="47669.656089687494" mi="1974.640" index="466" x="47662.460636760065" y="202.45169060695343">Lone Mtn.</string>
-   <string x-pos="47723.279136562494" mi="1976.861" index="467" x="47716.04268049732" y="182.60014393622404">Spaulding Mtn. Lean-to</string>
+   <string x-pos="47723.279136562494" mi="1976.861" index="467" x="47716.04268049732" y="182.60014393622404" color="green">Spaulding Mtn. Lean-to</string>
    <string x-pos="47743.201011562494" mi="1977.687" index="468" x="47735.9700862276" y="176.08003488888846">Spaulding Mtn.</string>
    <string x-pos="47848.430503749994" mi="1982.046" index="469" x="47841.13178305367" y="208.90375799999956">Caribou Mtn. Rd.</string>
    <string x-pos="47923.254722499994" mi="1985.146" index="470" x="47915.919867513585" y="165.361803460562">Crocker Mtn.</string>
    <string x-pos="48048.767417812494" mi="1990.346" index="471" x="48041.37084789797" y="219.76841242183565">Maine 27-Stratton</string>
-   <string x-pos="48171.868003749994" mi="1995.447" index="472" x="48164.43343461734" y="179.40803208398393">Horns Pond Lean-to</string>
+   <string x-pos="48171.868003749994" mi="1995.447" index="472" x="48164.43343461734" y="179.40803208398393" color="green">Horns Pond Lean-to</string>
    <string x-pos="48183.933433437494" mi="1995.946" index="473" x="48176.47190369653" y="182.87059078134064">South Horn</string>
    <string x-pos="48235.598472499994" mi="1998.087" index="474" x="48228.12393235095" y="170.81387128124953">Bigelow West Peak</string>
    <string x-pos="48252.497886562494" mi="1998.787" index="475" x="48245.011564325774" y="156.46051520164562">Avery Peak</string>
    <string x-pos="48377.395347499994" mi="2003.962" index="476" x="48369.85941499677" y="189.66886675801697">Little Bigelow Mtn.</string>
-   <string x-pos="48595.242027187494" mi="2012.987" index="477" x="48587.589241529284" y="241.69091219065558">West Carry pond Lean-to</string>
-   <string x-pos="48835.637534999994" mi="2022.947" index="478" x="48827.87611934244" y="242.57525568518477">Pierce Pond Lean-to</string>
+   <string x-pos="48595.242027187494" mi="2012.987" index="477" x="48587.589241529284" y="241.69091219065558" color="green">West Carry pond Lean-to</string>
+   <string x-pos="48835.637534999994" mi="2022.947" index="478" x="48827.87611934244" y="242.57525568518477" color="green">Pierce Pond Lean-to</string>
    <string x-pos="48876.672691249994" mi="2024.647" index="479" x="48868.888939852724" y="251.29392763265264">Kennebec River</string>
-   <string x-pos="49069.768394374994" mi="2032.647" index="480" x="49061.890448136386" y="240.2705707585276">Pleasant Pond Lean-to</string>
-   <string x-pos="49287.004722499994" mi="2041.647" index="481" x="49279.01714495551" y="241.4584139999996">Bald Mtn. Brook Lean-to</string>
+   <string x-pos="49069.768394374994" mi="2032.647" index="480" x="49061.890448136386" y="240.2705707585276" color="green">Pleasant Pond Lean-to</string>
+   <string x-pos="49287.004722499994" mi="2041.647" index="481" x="49279.01714495551" y="241.4584139999996" color="green">Bald Mtn. Brook Lean-to</string>
    <string x-pos="49335.276206874994" mi="2043.647" index="482" x="49327.26752202643" y="216.72114180799957">Moxie Bald Mtn.</string>
-   <string x-pos="49385.964683437494" mi="2045.747" index="483" x="49377.93041795089" y="229.2237121015621">Moxie Bald Lean-to</string>
-   <string x-pos="49601.760581874994" mi="2054.688" index="484" x="49593.633728646426" y="255.67041008454777">Horshoe canyon Lean-to</string>
+   <string x-pos="49385.964683437494" mi="2045.747" index="483" x="49377.93041795089" y="229.2237121015621" color="green">Moxie Bald Lean-to</string>
+   <string x-pos="49601.760581874994" mi="2054.688" index="484" x="49593.633728646426" y="255.67041008454777" color="green">Horshoe canyon Lean-to</string>
    <string x-pos="49818.020347499994" mi="2063.648" index="485" x="49809.79541792413" y="239.4594304551658">Maine 15-Monson</string>
-   <string x-pos="49890.432456874994" mi="2066.648" index="486" x="49882.17098353051" y="244.65946170370333">Leeman Brook Lean-to</string>
-   <string x-pos="50070.022300624994" mi="2074.088" index="487" x="50061.66238623432" y="264.65852018482366">Wilson Valley Lean-to</string>
-   <string x-pos="50183.464683437494" mi="2078.788" index="488" x="50175.050772350965" y="263.8582100000002">Long Pond Stream Lean-to</string>
-   <string x-pos="50279.040855312494" mi="2082.748" index="489" x="50270.58651895138" y="202.64718137600016">Cloud Pond Lean-to</string>
-   <string x-pos="50446.560386562494" mi="2089.689" index="490" x="50438.03945257599" y="211.25333834375022">Chairback Gap Lean-to</string>
-   <string x-pos="50684.543784999994" mi="2099.548" index="491" x="50675.88968634707" y="230.3177726666669">Carl Newhall Lean-to</string>
+   <string x-pos="49890.432456874994" mi="2066.648" index="486" x="49882.17098353051" y="244.65946170370333" color="green">Leeman Brook Lean-to</string>
+   <string x-pos="50070.022300624994" mi="2074.088" index="487" x="50061.66238623432" y="264.65852018482366" color="green">Wilson Valley Lean-to</string>
+   <string x-pos="50183.464683437494" mi="2078.788" index="488" x="50175.050772350965" y="263.8582100000002" color="green">Long Pond Stream Lean-to</string>
+   <string x-pos="50279.040855312494" mi="2082.748" index="489" x="50270.58651895138" y="202.64718137600016" color="green">Cloud Pond Lean-to</string>
+   <string x-pos="50446.560386562494" mi="2089.689" index="490" x="50438.03945257599" y="211.25333834375022" color="green">Chairback Gap Lean-to</string>
+   <string x-pos="50684.543784999994" mi="2099.548" index="491" x="50675.88968634707" y="230.3177726666669" color="green">Carl Newhall Lean-to</string>
    <string x-pos="50707.243980312494" mi="2100.489" index="492" x="50698.591488758946" y="222.6733926250002">Gulf Hagas Mtn.</string>
    <string x-pos="50745.862144374994" mi="2102.089" index="493" x="50737.19179041567" y="204.5379108750001">West peak</string>
    <string x-pos="50824.900230312494" mi="2105.364" index="494" x="50816.201782869306" y="183.7881132407058">White Cap Mtn.</string>
-   <string x-pos="50859.309409999994" mi="2106.789" index="495" x="50850.580176532334" y="183.9042512017282">Logan Brook Lean-to</string>
-   <string x-pos="50945.222495937494" mi="2110.349" index="496" x="50936.465847718566" y="242.30990740492823">East Branch Lean-to</string>
+   <string x-pos="50859.309409999994" mi="2106.789" index="495" x="50850.580176532334" y="183.9042512017282" color="green">Logan Brook Lean-to</string>
+   <string x-pos="50945.222495937494" mi="2110.349" index="496" x="50936.465847718566" y="242.30990740492823" color="green">East Branch Lean-to</string>
    <string x-pos="51029.704917812494" mi="2113.849" index="497" x="51020.90400759267" y="233.05977543750018">Little Boardman Mtn.</string>
-   <string x-pos="51148.952964687494" mi="2118.789" index="498" x="51140.082438957834" y="250.77583900000027">Cooper Brook Falls Lean-to</string>
+   <string x-pos="51148.952964687494" mi="2118.789" index="498" x="51140.082438957834" y="250.77583900000027" color="green">Cooper Brook Falls Lean-to</string>
    <string x-pos="51416.877769374994" mi="2129.890" index="499" x="51407.89615688995" y="259.65070978334114">Potaywadjo Spring</string>
-   <string x-pos="51660.661949062494" mi="2139.990" index="500" x="51651.56056109807" y="261.75955122257653">Wadleigh Stream Lean-to</string>
-   <string x-pos="51855.193199062494" mi="2148.049" index="501" x="51845.98545550533" y="259.34540724781357">Rainbow Stream Lean-to</string>
-   <string x-pos="52132.771324062494" mi="2159.550" index="502" x="52123.44924885165" y="245.0630289451542">Hurd Brook Lean-to</string>
+   <string x-pos="51660.661949062494" mi="2139.990" index="500" x="51651.56056109807" y="261.75955122257653" color="green">Wadleigh Stream Lean-to</string>
+   <string x-pos="51855.193199062494" mi="2148.049" index="501" x="51845.98545550533" y="259.34540724781357" color="green">Rainbow Stream Lean-to</string>
+   <string x-pos="52132.771324062494" mi="2159.550" index="502" x="52123.44924885165" y="245.0630289451542" color="green">Hurd Brook Lean-to</string>
    <string x-pos="52218.230308437494" mi="2163.090" index="503" x="52208.85241626717" y="261.3733460000002">Abol Bridge</string>
    <string x-pos="52399.255699062494" mi="2170.590" index="504" x="52389.7913302831" y="255.14997414432494">Daicey Pond Campground</string>
-   <string x-pos="52584.138511562494" mi="2178.250" index="505" x="52574.59027446471" y="137.5982276250001">Katahdin</string>
+   <string x-pos="52584.138511562494" mi="2178.250" color="red" index="505" x="52574.59027446471" y="137.5982276250001">Katahdin</string>
 </labels>

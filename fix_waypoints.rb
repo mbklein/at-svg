@@ -14,7 +14,7 @@ class FixWaypoints
       n1[a].nil? or n2[a].nil? ? nil : (n1[a].to_f + n2[a].to_f) / 2.0
     end
 
-    def combine(*nodes)
+    def combine(nodes)
       nodes.each { |n2|
         ix = n2['index'].to_i
         n1 = doc.at_xpath(%{//string[@index="#{ix-1}"]})
@@ -27,7 +27,7 @@ class FixWaypoints
       }
     end
     
-    def color(color, *nodes)
+    def color(color, nodes)
       nodes.each { |n|
         n['color'] = color
       }

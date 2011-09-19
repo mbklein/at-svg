@@ -85,7 +85,7 @@ $tc = (function($) {
     },
     
     drawWaypoint: function(data) {
-      console.debug(data.text);
+//      console.debug(data.text);
       if (data.x == null) {
         var p = this.contourAtMile(data.mi);
         data.x = p.x; data.y = p.y
@@ -147,7 +147,7 @@ $tc = (function($) {
       var pathIndex = 0;
       var path = null;
       for (pathIndex; pathIndex < stuff.contour.items.length; pathIndex++) {
-        console.debug("Checking path "+pathIndex)
+//        console.debug("Checking path "+pathIndex)
         var tp = stuff.contour.items[pathIndex].attr('path');
         if (tp[0][1] <= px && tp[tp.length-1][1] >= px) {
           path = stuff.contour.items[pathIndex];
@@ -218,7 +218,7 @@ $tc = (function($) {
       var points = $.map($.grep(path, function(e,i) { 
         return e[1] >= x1 && e[1] <= x2 
       }), function(a) { return [a.slice(0)] });
-      console.debug('Found '+points.length+' points')
+//      console.debug('Found '+points.length+' points')
       points[0][0] = 'M';
       points[1][0] = 'L';
       while (points[0].length > 3) { points[0].pop(); }
@@ -231,23 +231,23 @@ $tc = (function($) {
       var rcp = this.contourAtMile(Math.max(x1,x2));
       var result;
       if (lcp.pathIndex == rcp.pathIndex) {
-        console.debug('Getting subPath for '+lcp.pathIndex)
+//        console.debug('Getting subPath for '+lcp.pathIndex)
         result = $t.getSubpath(lcp.path,lcp.x,rcp.x);
       } else {
-        console.debug('Adding initial subPath for '+lcp.pathIndex)
+//        console.debug('Adding initial subPath for '+lcp.pathIndex)
         var bb = lcp.path.getBBox();
         var result = $t.getSubpath(lcp.path, lcp.x, bb.x + bb.width);
         var i = lcp.pathIndex + 1;
         while (i < rcp.pathIndex) {
           var mp = this.contour.items[i];
-          console.debug('Adding medial subPath for '+i)
+//          console.debug('Adding medial subPath for '+i)
           $.each(mp.attr('path'), function(pi) { 
             if (pi[0] != 'M') {
               result += pi.join(',');
             } 
           })
         }
-        console.debug('Adding final subPath for '+rcp.pathIndex)
+//        console.debug('Adding final subPath for '+rcp.pathIndex)
         result += $t.getSubpath(rcp.path,0,rcp.x).replace(/^M\s*[0-9.,]+/,'')
       }
       return this.paper.path(result).attr({stroke:'none'});
@@ -255,11 +255,12 @@ $tc = (function($) {
     
     position: function(mi) { 
       if (mi == null) {
-        return stuff.marker.position;
+        return Number(stuff.marker.position);
       } else {
         if (mi.toString().match(/^[+-]/)) {
           mi = this.position() + Number(mi);
         }
+        mi = Math.max(mi,0.01)
         stuff.marker.moveTo(mi);
         $.cookie('trail-location', mi, { expires: 365 });
         return mi;
