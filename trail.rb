@@ -38,23 +38,32 @@ class TrailApp < Sinatra::Application
     }.to_json
   end
   
-  get '/js/waypoints.js' do
+  post '/waypoint' do
     doc = Nokogiri::XML(File.open(File.expand_path('../public/svg/waypoints.xml', __FILE__)))
-    content_type 'text/javascript'
-    result = StringIO.new('')
-    result.puts "function drawWaypoints() {"
-    result.puts "  var waypoints = ["
-    doc.xpath('//string').each { |n|
-      color = (n['color'] || 'black').to_json
-      pos = (n["x-pos"].to_f / 24.1375)-0.347246653060874
-      text = n.text.to_json
-      result.puts(%{    [#{pos}, #{text}, #{color}],})
-    }
-    result.puts "  null];"
-    result.puts "  waypoints.pop();"
-    result.puts "  var drawNextWaypoint = function() { var wp = waypoints.shift(); $tc.drawWaypoint(wp[0],wp[1],wp[2]); if (waypoints.length > 0) { setTimeout(drawNextWaypoint, 1) }}"
-    result.puts "  drawNextWaypoint();"
-    result.puts "}"
-    result.string
+    n = doc.at_xpath("//string[@index='#{params[:index]}']")
+    unless [params[:x],params[:y]].include? 'NaN'
+      n['x'] = params[:x]
+      n['y'] = params[:y]
+    end
+    File.open(File.expand_path('../public/svg/waypoints.xml', __FILE__),'w') { |f| doc.write_to(f) }
+    content_type :json
+    true.to_json
+  end
+  
+  get '/waypoints' do
+    content_type :json
+    doc = Nokogiri::XML(File.open(File.expand_path('../public/svg/waypoints.xml', __FILE__)))
+    doc.xpath('//string').collect { |n|
+      color = (n['color'] || 'black')
+      pos = (n['x'] and (n['y'] != 'NaN')) ? [n['x'].to_f,n['y'].to_f] : n["mi"].to_f
+      {
+        :index => n['index'],
+        :mi => n["mi"].to_f,
+        :x => n['x'] ? n['x'].to_f : nil,
+        :y => n['y'] ? n['y'].to_f : nil,
+        :text => n.text,
+        :color => color
+      }
+    }.to_json
   end
 end

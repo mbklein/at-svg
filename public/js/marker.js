@@ -58,7 +58,7 @@ Marker = (function($) {
                   setTimeout(function() { 
                     path1.remove();
                     path2.remove();
-                  }, 1000);
+                  }, 10000);
                 })
               });
             });
@@ -72,7 +72,7 @@ Marker = (function($) {
                   setTimeout(function() { 
                     path1.remove();
                     path2.remove();
-                  }, 1000);
+                  }, 10000);
                 })
               });
             });

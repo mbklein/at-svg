@@ -21,17 +21,16 @@ $tc = (function($) {
     stuff: stuff,
     
     initialize: function() {
-      margin = 24.1375;
-      one_mile = 24.1375;
+      margin = 23.898347102873828;
+      one_mile = 24.125188535458204;
       this.viewport = $('#profile');
       this.center = center = $('#profile').width() / 2;
       this.paper = Raphael('overlay', $('#overlay').width(), $('#overlay').height());
       stuff.waypoints = this.paper.set();
       
-      this.drawMiles();
-      
       $.get('/path_info/Shaded_Profile').success(function(data) { 
-        stuff.profile = $tc.paper.path(data[0]).translate(0,-1).attr({ 'fill' : '#e1a51b' });
+        stuff.profile = $t.paper.path(data[0]).translate(0,-1).attr({ 'fill' : '#e1a51b' });
+        $t.drawMiles();
       });
 
       $.get('/path_info/Simplified_Path').success(function(data) { 
@@ -46,6 +45,8 @@ $tc = (function($) {
         stuff.marker.initialize(loc);
         $(profile).scrollLeft($t.milesToPixels(stuff.marker.position) - center);
       });
+      
+      this.drawWaypoints();
       
       $(window).hashchange(function() {
         $t.position(getHashAsNumber());
@@ -69,30 +70,71 @@ $tc = (function($) {
     drawMiles: function() {
       var p = this.paper;
       var g = stuff.grid = p.set();
-      g.push(p.rect(0,20,$('#overlay').width(),290));
+      g.push(p.rect(0,20,$('#overlay').width(),290).toFront());
       for (var i = 0; i < 2200; i += 1) { 
         var xPos = (i*one_mile)+margin;
         if (i % 5 == 0) {
-          g.push(p.text(xPos,320,i).attr({ 'font-size': '12pt', stroke: 'none', fill: 'black' }));
-          g.push(p.path('M'+xPos+' 20L'+xPos+' 25').attr({ stroke: 'black' }))
+          g.push(p.text(xPos,320,i).attr({ 'font-size': '12pt', stroke: 'none', fill: 'black' }).toFront());
+          g.push(p.path('M'+xPos+' 20L'+xPos+' 25').attr({ stroke: 'black' }).toFront())
+          g.push(p.path('M'+xPos+' 305L'+xPos+' 310').attr({ stroke: 'black' }).toFront())
         } else {
-          g.push(p.path('M'+xPos+' 20L'+xPos+' 22').attr({ stroke: 'black' }))
+          g.push(p.path('M'+xPos+' 20L'+xPos+' 22').attr({ stroke: 'black' }).toFront())
+          g.push(p.path('M'+xPos+' 308L'+xPos+' 310').attr({ stroke: 'black' }).toFront())
         }
       }
     },
     
-    drawWaypoint: function(mi, text, color) {
-      if (color == null) { color = 'black' }
-      var p = this.contourAtMile(mi);
+    drawWaypoint: function(data) {
+      console.debug(data.text);
+      if (data.x == null) {
+        var p = this.contourAtMile(data.mi);
+        data.x = p.x; data.y = p.y
+        $.ajax({
+          type: 'POST',
+          url: '/waypoint',
+          data: data,
+          async: false
+        });
+      }
+      if (data.color == null) { data.color = 'black' }
       var m = this.paper.set();
-      m.push(this.paper.path("M"+p.x+" "+p.y+"L"+p.x+" "+(p.y-15)).attr({ stroke: 'black', 'stroke-weight': '1pt' }));
-      m.push(this.paper.text(p.x, p.y-20, text).attr({'text-anchor':'start',fill: color,stroke: 'none'}).rotate(270,p.x,p.y-20));
+      m.push(this.paper.path("M"+data.x+" "+data.y+"L"+data.x+" "+(data.y-15)).attr({ stroke: 'black', 'stroke-weight': '1pt' }));
+      m.push(this.paper.text(data.x, data.y-20, data.text).attr({'text-anchor':'start',fill: data.color,stroke: 'none'}).rotate(270,data.x,data.y-20));
       stuff.waypoints.push(m);
       return m
     },
     
+    drawWaypoints: function() {
+      $.get('/waypoints').success(function(data) {
+        $.each(data, function(i) {
+          setTimeout(function() { 
+            try {
+              $t.drawWaypoint(data[i]);
+            } catch(e) {
+              console.warn("Swallowing exception: "+e)
+            }
+          }, Math.random() * 500);
+        });
+      })
+    },
+    
     milesToPixels: function(mi) {
       return (one_mile * mi) + margin;
+    },
+    
+    getPathLength: function(path) {
+      var max = path.getPointAtLength(20000).x;
+      var pos = 4000;
+      var current = path.getPointAtLength(pos).x;
+      while (current < max) {
+        pos += 1;
+        current = path.getPointAtLength(pos).x;
+      }
+      while (current > max) {
+        pos -= 1;
+        current = path.getPointAtLength(pos).x;
+      }
+      return pos
     },
     
     contourAt: function(pos) {
@@ -104,13 +146,11 @@ $tc = (function($) {
       
       var pathIndex = 0;
       var path = null;
-      var zero;
       for (pathIndex; pathIndex < stuff.contour.items.length; pathIndex++) {
-//        console.debug("Checking path "+pathIndex)
+        console.debug("Checking path "+pathIndex)
         var tp = stuff.contour.items[pathIndex].attr('path');
         if (tp[0][1] <= px && tp[tp.length-1][1] >= px) {
           path = stuff.contour.items[pathIndex];
-          zero = (tp[0][1]);
           break;
         }
       }
@@ -118,22 +158,50 @@ $tc = (function($) {
         return;
       }
       
-      var testX = Math.max(px - margin,margin);
+      var testX = Math.max((px * 1.3) - margin,margin);
       var result = path.getPointAtLength(testX);
-      var delta = testX * (result.x / px)
+      var nextResult = result;
+      var delta = Math.abs(testX * (result.x / px))
       report(delta,testX,result.x,px);
-      while (delta > 2) {
-        while ( px > result.x ) { report(delta,testX,result.x,px); testX += delta; result = path.getPointAtLength(testX) }
-        delta /= 2
-        while ( px < result.x ) { report(delta,testX,result.x,px); testX -= delta; result = path.getPointAtLength(testX) }
-        delta /= 2
+      while (delta >= 2) {
+        if (px > result.x) {
+          while (px > result.x) { 
+            report('+'+delta,testX,result.x,px); 
+            testX = testX+delta;
+            try {
+              nextResult = path.getPointAtLength(testX)
+              if (nextResult.hasOwnProperty('x') && nextResult.hasOwnProperty('x') &! (isNaN(nextResult.x) || isNaN(nextResult.y))) {
+                result = nextResult;
+              }
+            } catch(e) {
+              console.warn("Iterating again: "+e)
+            }
+          }
+          delta /= 2
+        } else if (px < result.x) {
+          while (px < result.x && (testX > 1)) { 
+            report('-'+delta,testX,result.x,px); 
+            testX = Math.max(testX-delta,1); 
+            try {
+              nextResult = path.getPointAtLength(testX) 
+              if (nextResult.hasOwnProperty('x') && nextResult.hasOwnProperty('x') &! (isNaN(nextResult.x) || isNaN(nextResult.y))) {
+                result = nextResult;
+              }
+            } catch(e) {
+              console.warn("Iterating again: "+e)
+            }
+          }
+          delta /= 2
+        } else {
+          break;
+        }
       }
-
+      report('FINAL',testX,result.x,px);
+      
       result.x = px
       result.at = testX;
       result.path = path;
       result.pathIndex = pathIndex;
-//      console.debug(result.x/px)
       return result;
     },
 
@@ -143,24 +211,44 @@ $tc = (function($) {
       return result;
     },
     
+    getSubpath: function(p,x1,x2) {
+      // Dumber than Raphaël's path.getSubpath(), but faster. Assumes all paths are left to right,
+      // which in our case is true.
+      var path = p.attr('path');
+      var points = $.map($.grep(path, function(e,i) { 
+        return e[1] >= x1 && e[1] <= x2 
+      }), function(a) { return [a.slice(0)] });
+      console.debug('Found '+points.length+' points')
+      points[0][0] = 'M';
+      points[1][0] = 'L';
+      while (points[0].length > 3) { points[0].pop(); }
+      while (points[1].length > 3) { points[1].pop(); }
+      return $.map(points, function(pi) { return pi.join(',') }).join('');
+    },
+    
     getSubContour: function(x1,x2) {
       var lcp = this.contourAtMile(Math.min(x1,x2));
       var rcp = this.contourAtMile(Math.max(x1,x2));
       var result;
       if (lcp.pathIndex == rcp.pathIndex) {
-        result = lcp.path.getSubpath(lcp.at,rcp.at);
+        console.debug('Getting subPath for '+lcp.pathIndex)
+        result = $t.getSubpath(lcp.path,lcp.x,rcp.x);
       } else {
-        var result = lcp.path.getSubpath(lcp.at,lcp.path.getTotalLength());
+        console.debug('Adding initial subPath for '+lcp.pathIndex)
+        var bb = lcp.path.getBBox();
+        var result = $t.getSubpath(lcp.path, lcp.x, bb.x + bb.width);
         var i = lcp.pathIndex + 1;
         while (i < rcp.pathIndex) {
           var mp = this.contour.items[i];
+          console.debug('Adding medial subPath for '+i)
           $.each(mp.attr('path'), function(pi) { 
             if (pi[0] != 'M') {
               result += pi.join(',');
             } 
           })
         }
-        result += rcp.path.getSubpath(0,rcp.at).replace(/^M\s*[0-9.,]+/,'')
+        console.debug('Adding final subPath for '+rcp.pathIndex)
+        result += $t.getSubpath(rcp.path,0,rcp.x).replace(/^M\s*[0-9.,]+/,'')
       }
       return this.paper.path(result).attr({stroke:'none'});
     },
