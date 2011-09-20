@@ -19,7 +19,6 @@ Marker = (function($) {
       objects: objects,
 
       initialize: function(mi) {
-        mi = Math.max(mi,0.1)
         paper = Raphael('overlay', $('#overlay').width(), $('#overlay').height());
         objects = paper.set();
         animatePaths = paper.set();

@@ -61,7 +61,7 @@ class TrailApp < Sinatra::Application
         :mi => n["mi"].to_f,
         :x => n['x'] ? n['x'].to_f : nil,
         :y => n['y'] ? n['y'].to_f : nil,
-        :text => n.text,
+        :text => n.text.gsub(/\\n/,"\n"),
         :color => color
       }
     }.to_json

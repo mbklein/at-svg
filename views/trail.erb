@@ -3,14 +3,26 @@
 	<title>AT Profile</title>
 	<meta name="author" content="Michael B. Klein">
 	<script type="text/javascript" src="/js/jquery-1.6.2.min.js"></script>
+	<script type="text/javascript" src="/js/jquery-ui-1.8.16.custom.min.js"></script>
 	<script type="text/javascript" src="/js/jquery.ba-hashchange.min.js"></script>
 	<script type="text/javascript" src="/js/jquery.cookie.js"></script>
 	<script type="text/javascript" src="/js/jquery.easing.1.3.js"></script>
 	<script type="text/javascript" src="/js/raphael.js"></script>
 	<script type="text/javascript" src="/js/trail.js"></script>
 	<script type="text/javascript" src="/js/marker.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#miles').addClass('ui-state-default ui-corner-all').focus(function() { $(this).addClass('ui-state-active') }).blur(function() { $(this).removeClass('ui-state-active') })
+			$('#add_miles').button().click(function() {
+				var v = $('#miles').val();
+				if (v.match(/^[+-]/) == null) { v = "+" + v }
+				$tc.position(v);
+			});
+		});
+	</script>
 	<link rel="stylesheet" type="text/css" href="/css/trail.css"/>
 	<link rel="stylesheet" type="text/css" href="/svg/AT_svg.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/sunny/jquery-ui-1.8.16.custom.css"/>
 </head>
 <body>
 	<div id="container" class="center">
@@ -23,6 +35,10 @@
 		</div>
 		<embed id="grid-right" class="part" src="/svg/grid_right_s.svg" type="image/svg+xml"/>
 		<div class="center" style="padding-top: 310px; font-weight: normal; font-size: 9pt">Distance (mi)</span>
+		<div id="controls">
+			<p>You've come <span id="from-springer">0</span> miles from Springer Mtn., with <span id="to-katahdin">0</span> more miles to go to reach Katahdin!
+			<p>How far did you go? <input type="text" name="miles" id="miles" value="0"/> miles. <input type="button" id="add_miles" value="Go!"/></p>
+		</div>
 	</div>
 </body>
 </html>

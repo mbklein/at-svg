@@ -44,6 +44,7 @@ $tc = (function($) {
         }
         stuff.marker.initialize(loc);
         $(profile).scrollLeft($t.milesToPixels(stuff.marker.position) - center);
+        $t.updateDistances();
       });
       
       this.drawWaypoints();
@@ -263,6 +264,7 @@ $tc = (function($) {
         mi = Math.max(mi,0.01)
         stuff.marker.moveTo(mi);
         $.cookie('trail-location', mi, { expires: 365 });
+        $t.updateDistances();
         return mi;
       }
     },
@@ -298,6 +300,11 @@ $tc = (function($) {
         callback(shape);
       }
       // console.debug(shape.attr('path').map(function(n) { return n.join(' ') }).join(''))
+    },
+    
+    updateDistances: function() {
+      $('#from-springer').html(Math.round(this.position()*1000)/1000);
+      $('#to-katahdin').html(Math.round((2178.5 - this.position())*1000)/1000);
     },
     
     debugMode: function() {
