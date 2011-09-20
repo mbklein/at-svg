@@ -2,45 +2,45 @@ body {
   font-family:Helvetica Neue;Verdana;Lucida Sans;sans-serif
 }
 .part {
-	height: 400px; 
-	position: absolute;
-	overflow-x: hidden;
-	clear: none;
+  height: 400px; 
+  position: absolute;
+  overflow-x: hidden;
+  clear: none;
 }
 .center {
   text-align: center;
-	margin: 0 auto;
+  margin: 0 auto;
 }
 #container {
-	position: relative;
-	width: 1024px;
-	padding: 0;
+  position: relative;
+  width: 1024px;
+  padding: 0;
   opacity: 0;
   overflow-x: hidden;
   overflow-y: hidden;
 }
 #grid-left  { 
-	left: 4px;
-	top: 21px;
-	width: 54px; 
+  left: 4px;
+  top: 21px;
+  width: 54px; 
 }
 #grid-right {
-	left: 1018px;
-	top: 21px;
-	width: 5px; 
+  left: 1018px;
+  top: 21px;
+  width: 5px; 
 }
 #profile {
-	z-index: -1;
-	top: 0px;
-	left: 54px;
-	width: 968px;
+  z-index: -1;
+  top: 0px;
+  left: 54px;
+  width: 968px;
 }
 #profile * { 
   position: absolute;
   top: 0px;
   left: 0px;
-	width: 52658px; 
-	height: 400px;
+  width: 52658px; 
+  height: 400px;
 }
 #overlay {
   z-index: 2;
@@ -57,4 +57,14 @@ body {
 }
 input:focus {
   outline: none;
+}
+.scroll-panel {
+  position: absolute;
+  display: inline-block;
+  top: 20px;
+  width: 128px;
+  height: 280px;
+  margin: 0;
+  padding: 0;
+  z-index: 100;
 }
