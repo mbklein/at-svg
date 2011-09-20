@@ -11,25 +11,7 @@
 	<script type="text/javascript" src="/js/raphael.js"></script>
 	<script type="text/javascript" src="/js/trail.js"></script>
 	<script type="text/javascript" src="/js/marker.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#miles').addClass('ui-state-default ui-corner-all').focus(function() { $(this).addClass('ui-state-active') }).blur(function() { $(this).removeClass('ui-state-active') })
-			$('#add_miles').button().click(function() {
-				var v = $('#miles').val();
-				if (v.match(/^[+-]/) == null) { v = "+" + v }
-				$tc.position(v);
-			});
-			
-      $('.scroll-panel').mouseenter(function(e) {
-        $('#profile').kinetic('start',{velocity:$(this).data('v')});
-      }).mouseout(function(e) {
-        if (! $(e.toElement).hasClass('scroll-panel')) {
-          $('#profile').kinetic('end');
-        }
-      });
-			$('#profile').kinetic();
-		});
-	</script>
+	<script type="text/javascript" src="/js/scroll.js"></script>
 	<link rel="stylesheet" type="text/css" href="/css/trail.css"/>
 	<link rel="stylesheet" type="text/css" href="/svg/AT_svg.css"/>
 	<link rel="stylesheet" type="text/css" href="/css/sunny/jquery-ui-1.8.16.custom.css"/>
@@ -44,9 +26,10 @@
 			<div id="overlay"></div>
 		</div>
 		<embed id="grid-right" class="part" src="/svg/grid_right_s.svg" type="image/svg+xml"/>
-		<div class="center" style="margin-top: 310px; font-weight: normal; font-size: 9pt">Distance (mi)</span></div>
-    <div class="scroll-panel" data-v="-40" style="left: 0px"></div>
-<!--
+		<div class="center" style="margin-top: 310px; font-weight: normal; font-size: 9pt">
+		  <p>Distance (mi)</p>
+		  <p><a href="#" id="reset-position">Reset Position</a></p>
+  		</div>
     <div class="scroll-panel" data-v="-40" style="left: 0px"></div>
     <div class="scroll-panel" data-v="-30" style="left: 128px"></div>
     <div class="scroll-panel" data-v="-20" style="left: 256px"></div>
@@ -54,8 +37,6 @@
     <div class="scroll-panel" data-v="+10" style="left: 512px"></div>
     <div class="scroll-panel" data-v="+20" style="left: 640px"></div>
     <div class="scroll-panel" data-v="+30" style="left: 768px"></div>
-    <div class="scroll-panel" data-v="+40" style="left: 896px"></div>
--->
     <div class="scroll-panel" data-v="+40" style="left: 896px"></div>
 	</div>
 	<div id="controls">
