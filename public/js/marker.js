@@ -1,16 +1,19 @@
 Marker = (function($) {
   return function(controller,one_mile,margin) {
-    var paper, objects, animatePaths;
+    var paper, objects;
 
     var createObjects = function(x,y) {
       $.each(objects.items, function(i) { objects.items[i].remove() });
       var pathSpec = 'M'+x+' '+(y)+'L'+x+' '+y;
+/*
       objects.push(paper.text(x, y-15, '☟')).attr({
         'font-size': '24pt', 
         'font-weight': 'normal',
         'fill': 'red', 
         'stroke-width': 0
       });
+*/
+      objects.push(paper.image('/img/sprite.png', x, y-10, 20, 20));
       return objects;
     }
 
@@ -20,8 +23,7 @@ Marker = (function($) {
 
       initialize: function(mi) {
         paper = Raphael('overlay', $('#overlay').width(), $('#overlay').height());
-        objects = paper.set();
-        animatePaths = paper.set();
+        this.objects = objects = paper.set();
         this.position = mi;
         this.reinitialize();
       },
@@ -39,30 +41,29 @@ Marker = (function($) {
             dx = x2-x1;
             
         var pos = this.position;
+        if (pos > mi) {
+          objects[0].attr({ src: '/img/sprite-b.png' })
+        }
         if (px2 - px1 < controller.viewport.width()) {
           // Less than one screen? Just center it and go.
           var path = controller.getSubContour(x1,x2);
-          animatePaths.push(path);
-          console.dir(path);
           controller.scrollTo((x1+x2)/2, function() {
             if (pos < mi) {
               objects.animateAlong(path,125*dx,false);
             } else {
-              objects.animateAlongBack(path,125*dx,false);
+              objects.animateAlongBack(path,125*dx,false, function() {objects[0].attr({ src: '/img/sprite.png' })});
             }
           });
         } else {
           // Otherwise, use one path to get us off the screen, and another to reenter
           var path1 = controller.getSubContour(x1, x1+40);
           var path2 = controller.getSubContour(x2-40, x2);
-          animatePaths.push(path1);
-          animatePaths.push(path2);
           if (pos < mi) {
             objects.animateAlong(path1,5000,false,function() { 
               controller.scrollTo(x2, function() {
                 var ps = path2.attr('path');
                 var n = ps[0];
-                createObjects(n[1],n[2]);
+                  objects.attr({ x: n[1], y: n[2]-10});
                 objects.animateAlong(path2,5000,false);
               });
             });
@@ -71,8 +72,8 @@ Marker = (function($) {
               controller.scrollTo(x1, function() {
                 var ps = path1.attr('path');
                 var n = ps[ps.length-1];
-                createObjects(n[1],n[2]);
-                objects.animateAlongBack(path1,5000,false);
+                objects.attr({ x: n[1], y: n[2]-10});
+                objects.animateAlongBack(path1,5000,false,function() { objects[0].attr({ src: '/img/sprite.png' }) });
               });
             });
           }
