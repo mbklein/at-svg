@@ -27,6 +27,10 @@ class TrailApp < Sinatra::Application
     end
   end
   
+  get '/' do
+    redirect '/trail'
+  end
+  
   get '/trail' do
     erb :trail
   end
