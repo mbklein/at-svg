@@ -35,7 +35,8 @@ Marker = (function($) {
         var x1 = Math.min(this.position,mi),
             x2 = Math.max(this.position,mi),
             px1 = controller.milesToPixels(x1),
-            px2 = controller.milesToPixels(x2);
+            px2 = controller.milesToPixels(x2),
+            dx = x2-x1;
             
         var pos = this.position;
         if (px2 - px1 < controller.viewport.width()) {
@@ -45,9 +46,9 @@ Marker = (function($) {
           console.dir(path);
           controller.scrollTo((x1+x2)/2, function() {
             if (pos < mi) {
-              objects.animateAlong(path,5000,false);
+              objects.animateAlong(path,125*dx,false);
             } else {
-              objects.animateAlongBack(path,5000,false);
+              objects.animateAlongBack(path,125*dx,false);
             }
           });
         } else {

@@ -28,35 +28,37 @@ $tc = (function($) {
       this.paper = Raphael('overlay', $('#overlay').width(), $('#overlay').height());
       stuff.waypoints = this.paper.set();
       
-      $.get('/path_info/Shaded_Profile').success(function(data) { 
-        stuff.profile = $t.paper.path(data[0]).translate(0,-1).attr({ 'fill' : '#e1a51b' });
-        $t.drawMiles();
-      });
+      $.when(
+        $.get('/path_info/Shaded_Profile').success(function(data) { 
+          stuff.profile = $t.paper.path(data[0]).translate(0,-1).attr({ 'fill' : '#e1a51b' });
+          $t.drawMiles();
+        }),
 
-      $.get('/path_info/Simplified_Path').success(function(data) { 
-        stuff.contour = $tc.paper.set();
-        $.each(data,function(i) { stuff.contour.push($tc.paper.path(data[i]).attr({ 'stroke' : 'none' }).translate(0,20)) });
-        // .translate(0,20);
-        stuff.marker = marker = new Marker($t, one_mile, margin);
-        var loc = getHashAsNumber();
-        if (loc == null) {
-          loc = $.cookie('trail-location') || 0;
-        }
-        stuff.marker.initialize(loc);
-        $(profile).scrollLeft($t.milesToPixels(stuff.marker.position) - center);
-        $t.updateDistances();
+        $.get('/waypoints').success(function(data) {
+          $t.drawWaypoints(data);
+        }),
+
+        $.get('/path_info/Simplified_Path').success(function(data) { 
+          stuff.contour = $tc.paper.set();
+          $.each(data,function(i) { stuff.contour.push($tc.paper.path(data[i]).attr({ 'stroke' : 'none' }).translate(0,20)) });
+          // .translate(0,20);
+          stuff.marker = marker = new Marker($t, one_mile, margin);
+          var loc = getHashAsNumber();
+          if (loc == null) {
+            loc = $.cookie('trail-location') || 0;
+          }
+          stuff.marker.initialize(loc);
+          $(profile).scrollLeft($t.milesToPixels(stuff.marker.position) - center);
+          $t.updateDistances();
+        })
+      ).then(function() {
+        $('#preloader').animate({'opacity':0},2000);
+        $('#everything').animate({'opacity':1},2500);
       });
-      
-      this.drawWaypoints();
-      
+            
       $(window).hashchange(function() {
         $t.position(getHashAsNumber());
       });
-
-      setTimeout(function() {
-        $('#container').animate({'opacity':1},2000);
-        $('#overlay').animate({opacity:1},2500);
-      },2000);
     },
     
     background: function() {
@@ -105,18 +107,16 @@ $tc = (function($) {
       return m
     },
     
-    drawWaypoints: function() {
-      $.get('/waypoints').success(function(data) {
-        $.each(data, function(i) {
-          setTimeout(function() { 
-            try {
-              $t.drawWaypoint(data[i]);
-            } catch(e) {
-              console.warn("Swallowing exception: "+e)
-            }
-          }, Math.random() * 500);
-        });
-      })
+    drawWaypoints: function(data) {
+      $.each(data, function(i) {
+//          setTimeout(function() { 
+          try {
+            $t.drawWaypoint(data[i]);
+          } catch(e) {
+            console.warn("Swallowing exception: "+e)
+          }
+//          }, Math.random() * 500);
+      });
     },
     
     milesToPixels: function(mi) {
@@ -261,7 +261,6 @@ $tc = (function($) {
         if (mi.toString().match(/^[+-]/)) {
           mi = this.position() + Number(mi);
         }
-        mi = Math.max(mi,0.01)
         stuff.marker.moveTo(mi);
         $.cookie('trail-location', mi, { expires: 365 });
         $t.updateDistances();

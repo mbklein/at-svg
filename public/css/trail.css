@@ -1,4 +1,5 @@
 body {
+  position: relative;
   font-family:Helvetica Neue;Verdana;Lucida Sans;sans-serif
 }
 .part {
@@ -11,11 +12,23 @@ body {
   text-align: center;
   margin: 0 auto;
 }
+#preloader {
+  font-size: 48px;
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 300px;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+#everything {
+  opacity: 0;
+}
 #container {
   position: relative;
   width: 1024px;
   padding: 0;
-  opacity: 0;
   overflow-x: hidden;
   overflow-y: hidden;
 }
@@ -44,16 +57,18 @@ body {
 }
 #overlay {
   z-index: 2;
-  opacity: 0;
 }
 #controls {
   padding: 10px;
   margin-top: 100px;
   text-align: left;
-  font-size: 14px;
+  font-size: 18px;
 }
 #controls input {
-  font-size: 14px;
+  font-size: 18px;
+}
+#miles {
+  padding: 6px 3px 7px;
 }
 input:focus {
   outline: none;
@@ -67,4 +82,7 @@ input:focus {
   margin: 0;
   padding: 0;
   z-index: 100;
+}
+.distance {
+  color: green;
 }

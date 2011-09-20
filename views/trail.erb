@@ -35,6 +35,8 @@
 	<link rel="stylesheet" type="text/css" href="/css/sunny/jquery-ui-1.8.16.custom.css"/>
 </head>
 <body>
+  <div id="preloader">Loading...</div>
+  <div id="everything">
 	<div id="container" class="center">
 		<div class="center" style="padding-left: 49px; font-weight: bold">The Appalachian Trail</span></div>
 		<embed id="grid-left" class="part" src="/svg/grid_left_s.svg" type="image/svg+xml"/>
@@ -57,8 +59,9 @@
     <div class="scroll-panel" data-v="+40" style="left: 896px"></div>
 	</div>
 	<div id="controls">
-		<p>You've come <span id="from-springer">0</span> miles from Springer Mtn., with <span id="to-katahdin">0</span> more miles to go to reach Katahdin!
-		<p>How far did you go? <input type="text" name="miles" id="miles" value="0"/> miles. <input type="button" id="add_miles" value="Go!"/></p>
+		<p>You've come <span class="distance" id="from-springer">0</span> miles from Springer Mtn., with <span class="distance" id="to-katahdin">0</span> more miles to go to reach Katahdin!
+		<p>Add mileage: <input type="text" name="miles" id="miles" value="0"/> <input type="button" id="add_miles" value="Go!"/></p>
+	</div>
 	</div>
 </body>
 </html>
