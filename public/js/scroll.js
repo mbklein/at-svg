@@ -19,11 +19,12 @@ $(document).ready(function() {
       $('#profile').kinetic('start',{velocity: kineticVelocity});
     }
   }).mouseout(function(e) {
-    if (! $(e.toElement).hasClass('scroll-panel')) {
+    var nextTarget = e.relatedTarget || e.toElement;
+    if (! $(nextTarget).hasClass('scroll-panel')) {
       kineticVelocity = 0;
       $('#profile').kinetic('end');
     } else {
-      kineticVelocity = $(e.toElement).data('v');
+      kineticVelocity = $(nextTarget).data('v');
       $('#profile').kinetic('stop');
     }
   });
