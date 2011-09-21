@@ -22,7 +22,7 @@ Marker = (function($) {
     var createObjects = function(x,y) {
       objects && objects.remove();
       var pathSpec = 'M'+x+' '+(y)+'L'+x+' '+y;
-      objects = paper.image('/img/hiker-F1.png', x, y-15, 32, 32);
+      objects = paper.image('/img/hiker-F1.png', x-16, y-15, 32, 32);
       objects.onAnimation(function() {
         var s = animating.nextSprite();
         s && objects.attr({ src: s })
@@ -83,7 +83,7 @@ Marker = (function($) {
           }
           aniFunc.call(objects,pInfo.paths[0],$m.speed*40,false,function() { 
             controller.scrollTo(pInfo.sPos, function() {
-              objects.attr({ x: pInfo.mPos[1], y: pInfo.mPos[2]-15});
+              objects.attr({ x: pInfo.mPos[1]-16, y: pInfo.mPos[2]-15});
               aniFunc.call(objects,pInfo.paths[1],$m.speed*40,false,function() { objects.attr({ src: '/img/hiker-F1.png' }) });
             });
           });
