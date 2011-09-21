@@ -56,7 +56,7 @@ Marker = (function($) {
         var pos = this.position;
         var aniFunc = pos < mi ? objects.animateAlong : objects.animateAlongBack;
         animating.direction = pos > mi ? 'L' : 'R';
-        objects.attr({ src: animating.nextSprite(); })
+        objects.attr({ src: animating.nextSprite() });
         if (px2 - px1 < controller.viewport.width()) {
           // Less than one screen? Just center it and go.
           var path = controller.getSubContour(x1,x2);
