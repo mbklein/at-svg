@@ -56,8 +56,13 @@ Marker = (function($) {
           });
         } else {
           // Otherwise, use one path to get us off the screen, and another to reenter
-          var path1 = controller.getSubContour(x1, x1+40);
-          var path2 = controller.getSubContour(x2-40, x2);
+          var e1 = x1+40, s2 = x2-40;
+          if (s2 < e1) {
+            e1 = s2 = ((e1+s2)/2);
+          }
+          
+          var path1 = controller.getSubContour(x1, e1);
+          var path2 = controller.getSubContour(s2, x2);
           if (pos < mi) {
             objects.animateAlong(path1,5000,false,function() { 
               controller.scrollTo(x2, function() {
