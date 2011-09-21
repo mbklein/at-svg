@@ -44,9 +44,7 @@ $tc = (function($) {
           // .translate(0,20);
           stuff.marker = marker = new Marker($t, one_mile, margin);
           var loc = getHashAsNumber();
-          if (loc == null) {
-            loc = $.cookie('trail-location') || 0;
-          }
+          loc || (loc = $.cookie('trail-location') || 0);
           stuff.marker.initialize(loc);
           $(profile).scrollLeft($t.milesToPixels(stuff.marker.position) - center);
           $t.updateDistances();
@@ -99,7 +97,7 @@ $tc = (function($) {
           async: false
         });
       }
-      if (data.color == null) { data.color = 'black' }
+      data.color || (data.color = 'black')
       var m = this.paper.set();
       m.push(this.paper.path("M"+data.x+" "+data.y+"L"+data.x+" "+(data.y-15)).attr({ stroke: 'black', 'stroke-weight': '1pt' }));
       m.push(this.paper.text(data.x, data.y-20, data.text).attr({'text-anchor':'start',fill: data.color,stroke: 'none'}).rotate(270,data.x,data.y-20));
@@ -153,9 +151,8 @@ $tc = (function($) {
           break;
         }
       }
-      if (path == null) {
+      if (path == null) 
         return;
-      }
       
       var testX = Math.max((px * 1.3) - margin,margin);
       var result = path.getPointAtLength(testX);
@@ -259,6 +256,7 @@ $tc = (function($) {
         if (mi.toString().match(/^[+-]/)) {
           mi = this.position() + Number(mi);
         }
+        mi = Math.max(0,Math.min(mi,2178.5));
         stuff.marker.moveTo(mi);
         $.cookie('trail-location', mi, { expires: 365 });
         $t.updateDistances();

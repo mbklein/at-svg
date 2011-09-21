@@ -1,11 +1,24 @@
 Marker = (function($) {
   return function(controller,one_mile,margin) {
-    var paper, objects;
-    var animating = { 
+    var paper, hiker;
+
+    var $a = { 
       spriteOrder: [0,1,2,1],
       direction: 'R', 
       index: 0,
       lastUpdate: new Date(),
+      
+      createObjects: function(x,y) {
+        hiker && hiker.remove();
+        hiker = paper.image('/img/hiker-R1.png', x-16, y-27, 32, 32);
+        hiker.onAnimation(function() {
+          var s = $a.nextSprite();
+          s && hiker.attr({ src: s })
+        });
+        $a.peek();
+        return hiker;
+      },
+      
       nextSprite: function() {
         var t = new Date();
         if ((t - this.lastUpdate) > 75) {
@@ -16,23 +29,33 @@ Marker = (function($) {
         } else {
           return false;
         }
+      },
+      
+      peekTimeout: null,
+      peek: function() {
+        $a.peekTimeout = setTimeout(function() {
+          var face = ['F','F','B'][Math.round(Math.random()*2)];
+          hiker.attr({ src: '/img/hiker-'+face+'1.png' });
+          $a.peekTimeout = setTimeout(function() {
+            $a.end();
+          }, (Math.random() * 4000)+1);
+        }, (Math.random() * 15000)+2);
+      },
+      
+      start: function(dir) {
+        clearTimeout($a.peekTimeout);
+        $a.direction = dir;
+        hiker.attr({ src: $a.nextSprite() });
+      },
+      
+      end: function() {
+        hiker.attr({ src: '/img/hiker-R1.png' });
+        $a.peek();
       }
-    }
-
-    var createObjects = function(x,y) {
-      objects && objects.remove();
-      var pathSpec = 'M'+x+' '+(y)+'L'+x+' '+y;
-      objects = paper.image('/img/hiker-R1.png', x-16, y-15, 32, 32);
-      objects.onAnimation(function() {
-        var s = animating.nextSprite();
-        s && objects.attr({ src: s })
-      });
-      return objects;
     }
 
     return $m = {
       position: 0,
-      objects: objects,
       speed: 250,
       
       initialize: function(mi) {
@@ -43,7 +66,7 @@ Marker = (function($) {
       
       reinitialize: function() {
         this.contourPos = controller.contourAtMile(this.position);
-        this.objects = createObjects(this.contourPos.x,this.contourPos.y);
+        this.hiker = $a.createObjects(this.contourPos.x,this.contourPos.y);
       },
 
       moveTo: function(mi) {
@@ -54,14 +77,13 @@ Marker = (function($) {
             dx = x2-x1;
             
         var pos = this.position;
-        var aniFunc = pos < mi ? objects.animateAlong : objects.animateAlongBack;
-        animating.direction = pos > mi ? 'L' : 'R';
-        objects.attr({ src: animating.nextSprite() });
+        var aniFunc = pos < mi ? hiker.animateAlong : hiker.animateAlongBack;
+        $a.start(pos > mi ? 'L' : 'R');
         if (px2 - px1 < controller.viewport.width()) {
           // Less than one screen? Just center it and go.
           var path = controller.getSubContour(x1,x2);
           controller.scrollTo((x1+x2)/2, function() {
-            aniFunc.call(objects,path,$m.speed*dx,false, function() {objects.attr({ src: '/img/hiker-R1.png' })});
+            aniFunc.call(hiker,path,$m.speed*dx,false, function() { $a.end() });
           });
         } else {
           // Otherwise, use one path to get us off the screen, and another to reenter
@@ -74,18 +96,18 @@ Marker = (function($) {
           var path2 = controller.getSubContour(s2, x2);
           var pInfo;
           if (pos < mi) {
-            aniFunc = objects.animateAlong;
+            aniFunc = hiker.animateAlong;
             var ps = path2.attr('path');
             pInfo = { paths: [path1,path2], sPos: x2, mPos: ps[0] }
           } else {
-            aniFunc = objects.animateAlongBack;
+            aniFunc = hiker.animateAlongBack;
             var ps = path1.attr('path');
             pInfo = { paths: [path2,path1], sPos: x1, mPos: ps[ps.length-1] }
           }
-          aniFunc.call(objects,pInfo.paths[0],$m.speed*40,false,function() { 
+          aniFunc.call(hiker,pInfo.paths[0],$m.speed*40,false,function() { 
             controller.scrollTo(pInfo.sPos, function() {
-              objects.attr({ x: pInfo.mPos[1]-16, y: pInfo.mPos[2]-15});
-              aniFunc.call(objects,pInfo.paths[1],$m.speed*40,false,function() { objects.attr({ src: '/img/hiker-R1.png' }) });
+              hiker.attr({ x: pInfo.mPos[1]-16, y: pInfo.mPos[2]-27});
+              aniFunc.call(hiker,pInfo.paths[1],$m.speed*40,false,function() { $a.end() });
             });
           });
         }
