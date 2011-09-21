@@ -22,7 +22,7 @@ Marker = (function($) {
     var createObjects = function(x,y) {
       objects && objects.remove();
       var pathSpec = 'M'+x+' '+(y)+'L'+x+' '+y;
-      objects = paper.image('/img/hiker-F1.png', x-16, y-15, 32, 32);
+      objects = paper.image('/img/hiker-R1.png', x-16, y-15, 32, 32);
       objects.onAnimation(function() {
         var s = animating.nextSprite();
         s && objects.attr({ src: s })
@@ -61,7 +61,7 @@ Marker = (function($) {
           // Less than one screen? Just center it and go.
           var path = controller.getSubContour(x1,x2);
           controller.scrollTo((x1+x2)/2, function() {
-            aniFunc.call(objects,path,$m.speed*dx,false, function() {objects.attr({ src: '/img/hiker-F1.png' })});
+            aniFunc.call(objects,path,$m.speed*dx,false, function() {objects.attr({ src: '/img/hiker-R1.png' })});
           });
         } else {
           // Otherwise, use one path to get us off the screen, and another to reenter
@@ -85,7 +85,7 @@ Marker = (function($) {
           aniFunc.call(objects,pInfo.paths[0],$m.speed*40,false,function() { 
             controller.scrollTo(pInfo.sPos, function() {
               objects.attr({ x: pInfo.mPos[1]-16, y: pInfo.mPos[2]-15});
-              aniFunc.call(objects,pInfo.paths[1],$m.speed*40,false,function() { objects.attr({ src: '/img/hiker-F1.png' }) });
+              aniFunc.call(objects,pInfo.paths[1],$m.speed*40,false,function() { objects.attr({ src: '/img/hiker-R1.png' }) });
             });
           });
         }
