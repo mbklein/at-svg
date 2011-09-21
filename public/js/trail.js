@@ -109,13 +109,11 @@ $tc = (function($) {
     
     drawWaypoints: function(data) {
       $.each(data, function(i) {
-//          setTimeout(function() { 
           try {
             $t.drawWaypoint(data[i]);
           } catch(e) {
             console.warn("Swallowing exception: "+e)
           }
-//          }, Math.random() * 500);
       });
     },
     

@@ -1,36 +1,49 @@
 Marker = (function($) {
   return function(controller,one_mile,margin) {
     var paper, objects;
+    var animating = { 
+      spriteOrder: [0,1,2,1],
+      direction: 'R', 
+      index: 0,
+      lastUpdate: new Date(),
+      nextSprite: function() {
+        var t = new Date();
+        if ((t - this.lastUpdate) > 75) {
+          this.lastUpdate = t;
+          this.index += 1;
+          (this.index == this.spriteOrder.length) && (this.index = 0);
+          return '/img/hiker-'+this.direction+this.spriteOrder[this.index]+'.png';
+        } else {
+          return false;
+        }
+      }
+    }
 
     var createObjects = function(x,y) {
-      $.each(objects.items, function(i) { objects.items[i].remove() });
+      objects && objects.remove();
       var pathSpec = 'M'+x+' '+(y)+'L'+x+' '+y;
-/*
-      objects.push(paper.text(x, y-15, '☟')).attr({
-        'font-size': '24pt', 
-        'font-weight': 'normal',
-        'fill': 'red', 
-        'stroke-width': 0
+      objects = paper.image('/img/hiker-F1.png', x, y-15, 32, 32);
+      objects.onAnimation(function() {
+        var s = animating.nextSprite();
+        s && objects.attr({ src: s })
       });
-*/
-      objects.push(paper.image('/img/sprite.png', x, y-10, 20, 20));
       return objects;
     }
 
     return $m = {
       position: 0,
       objects: objects,
-
+      speed: 250,
+      
       initialize: function(mi) {
         paper = Raphael('overlay', $('#overlay').width(), $('#overlay').height());
-        this.objects = objects = paper.set();
         this.position = mi;
         this.reinitialize();
       },
       
       reinitialize: function() {
         this.contourPos = controller.contourAtMile(this.position);
-        createObjects(this.contourPos.x,this.contourPos.y);
+        this.objects = createObjects(this.contourPos.x,this.contourPos.y);
       },
 
       moveTo: function(mi) {
@@ -41,18 +54,13 @@ Marker = (function($) {
             dx = x2-x1;
             
         var pos = this.position;
-        if (pos > mi) {
-          objects[0].attr({ src: '/img/sprite-b.png' })
-        }
+        var aniFunc = pos < mi ? objects.animateAlong : objects.animateAlongBack;
+        animating.direction = pos > mi ? 'L' : 'R';
         if (px2 - px1 < controller.viewport.width()) {
           // Less than one screen? Just center it and go.
           var path = controller.getSubContour(x1,x2);
           controller.scrollTo((x1+x2)/2, function() {
-            if (pos < mi) {
-              objects.animateAlong(path,125*dx,false);
-            } else {
-              objects.animateAlongBack(path,125*dx,false, function() {objects[0].attr({ src: '/img/sprite.png' })});
-            }
+            aniFunc.call(objects,path,$m.speed*dx,false, function() {objects.attr({ src: '/img/hiker-F1.png' })});
           });
         } else {
           // Otherwise, use one path to get us off the screen, and another to reenter
@@ -63,25 +71,22 @@ Marker = (function($) {
           
           var path1 = controller.getSubContour(x1, e1);
           var path2 = controller.getSubContour(s2, x2);
+          var pInfo;
           if (pos < mi) {
-            objects.animateAlong(path1,5000,false,function() { 
-              controller.scrollTo(x2, function() {
-                var ps = path2.attr('path');
-                var n = ps[0];
-                  objects.attr({ x: n[1], y: n[2]-10});
-                objects.animateAlong(path2,5000,false);
-              });
-            });
+            aniFunc = objects.animateAlong;
+            var ps = path2.attr('path');
+            pInfo = { paths: [path1,path2], sPos: x2, mPos: ps[0] }
           } else {
-            objects.animateAlongBack(path2,5000,false,function() { 
-              controller.scrollTo(x1, function() {
-                var ps = path1.attr('path');
-                var n = ps[ps.length-1];
-                objects.attr({ x: n[1], y: n[2]-10});
-                objects.animateAlongBack(path1,5000,false,function() { objects[0].attr({ src: '/img/sprite.png' }) });
-              });
-            });
+            aniFunc = objects.animateAlongBack;
+            var ps = path1.attr('path');
+            pInfo = { paths: [path2,path1], sPos: x1, mPos: ps[ps.length-1] }
           }
+          aniFunc.call(objects,pInfo.paths[0],$m.speed*40,false,function() { 
+            controller.scrollTo(pInfo.sPos, function() {
+              objects.attr({ x: pInfo.mPos[1], y: pInfo.mPos[2]-15});
+              aniFunc.call(objects,pInfo.paths[1],$m.speed*40,false,function() { objects.attr({ src: '/img/hiker-F1.png' }) });
+            });
+          });
         }
         this.position = mi
       }
