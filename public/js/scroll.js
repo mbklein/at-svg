@@ -8,7 +8,7 @@ $(document).ready(function() {
 	$('#miles').addClass('ui-state-default ui-corner-all').focus(function() { $(this).addClass('ui-state-active') }).blur(function() { $(this).removeClass('ui-state-active') })
 	$('#add_miles').button().click(function() {
 		var v = $('#miles').val();
-		if (v.match(/^[+-]/) == null) { v = "+" + v }
+		v.match(/^[+-]/) || (v = "+" + v)
 		$tc.position(v);
 	});
 
