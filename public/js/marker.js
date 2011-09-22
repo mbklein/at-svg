@@ -10,7 +10,7 @@ Marker = (function($) {
       
       createObjects: function(x,y) {
         hiker && hiker.remove();
-        hiker = paper.image('/img/hiker-R1.png', x-16, y-27, 32, 32);
+        hiker = paper.image('/img/hiker-R1.png', x-16, y-25, 32, 32);
         hiker.onAnimation(function() {
           var s = $a.nextSprite();
           s && hiker.attr({ src: s })
@@ -106,7 +106,7 @@ Marker = (function($) {
           }
           aniFunc.call(hiker,pInfo.paths[0],$m.speed*40,false,function() { 
             controller.scrollTo(pInfo.sPos, function() {
-              hiker.attr({ x: pInfo.mPos[1]-16, y: pInfo.mPos[2]-27});
+              hiker.attr({ x: pInfo.mPos[1]-16, y: pInfo.mPos[2]-25});
               aniFunc.call(hiker,pInfo.paths[1],$m.speed*40,false,function() { $a.end() });
             });
           });
